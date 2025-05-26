@@ -1,0 +1,413 @@
+<html lang="en" class="lenis lenis-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dat Nguyen</title>
+
+    <link rel="icon" type="image/x-icon" href="./assests/icon/DatNgicon_black.svg" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.3/dist/lenis.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script>
+      new WOW().init();
+    </script>
+  </head>
+  <style>
+    .heavy-scroll {
+      /* Ensure the element is positioned to allow transform */
+      position: relative;
+      will-change: transform; /* Optimize for smooth animation */
+      transition: transform 0.1s linear; /* Smooth movement */
+    }
+
+    html{
+      scroll-behavior: smooth;
+    }
+    .firstpara{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      align-self: stretch;
+    }
+    .firstcontainer{
+      display: flex;
+      padding: 0px 32px;
+      flex-direction: column;
+      align-items: center;
+      gap: 244px;
+    }
+
+    .cv_button{
+      background: #10100E;
+      display: flex;
+      width: 218px;
+      padding: 8px 8px 8px 24px;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 50px;
+    }
+
+    .social_button{
+      display: flex; 
+      flex-direction: row;   
+      height: 64px; 
+      width: 124px; 
+      gap: 16px; 
+      border: 1px solid #10100E; 
+      padding: 16px 24px  
+    }
+    .icon-cv-wrapper {
+              position: relative;
+              width: 48px;
+              height: 48px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #EEEFE7;
+              border-radius: 100px;
+              overflow: hidden;
+    }
+    
+    .icon-social-wrapper {
+              position: relative;
+              width: 32px;
+              height: 32px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              overflow: hidden;
+    }
+    .social-icon, .social-icon-clone {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            transition: transform 0.4s ease;
+    }
+    .arrow-icon, .arrow-icon-clone {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            transition: transform 0.4s ease;
+    }
+    .social-icon-clone {
+            transform: translateY(100%);
+    }
+    .social_button:hover .social-icon {
+            transform: translateY(-100%);
+            
+    }
+    .social_button:hover .social-icon-clone {
+            transform: translateY(0);
+            
+    }
+    .arrow-icon-clone {
+            transform: translate(-100%,100%);
+            
+    }
+    .social_button:hover .arrow-icon {
+            transform: translate(100%, -100%);
+            
+    }
+    .social_button:hover .arrow-icon-clone {
+            transform: translateY(0);
+            transform: translateX(0);
+    }
+    
+    .download-icon, .download-icon-clone {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            transition: transform 0.4s ease;
+    }
+    .download-icon-clone {
+            transform: translateY(-120%);
+    }
+    
+
+
+    .cv_button:hover .download-icon {
+            transform: translateY(120%);
+    }
+
+    .cv_button:hover .download-icon-clone {
+            transform: translateY(0);
+    }
+
+    .workcard{
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 16px;
+
+      gap: 8px;
+      transition: scale 0.4s ease
+    }
+    .workcardinfo{
+      display:flex;
+      flex-direction: column;
+      padding: 16px 0px;
+      gap: 16px;
+    }
+    .contactinfo{
+      display:flex;
+      flex-direction: row;
+      padding: 8px 0px;
+      gap: 16px;   
+    }
+    .skill_container{
+      display:flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+      gap: 8px;
+      width:100%;
+    }
+    .infor_skill_container{
+      display:flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+      gap: 16px;
+      height: 80px;
+      overflow: hidden;
+      transition: height 0.4s ease, opacity 0.5s ease;
+    }
+    .skill-icon{
+      width: 32px;
+      height: 32px;
+      transition: transform 0.4s ease;
+    }
+    .skill_container:hover .infor_skill_container {
+       height: 204px;
+    }
+    .skill_container:hover .skill-icon {
+      transform: rotate(-90deg);
+    }
+
+    .tag{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      background-color: #a3a3a3;
+      padding: 8px 16px;
+      font-family: 'Be Vietnam Pro';
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: #10100E;
+    }
+
+    .round_button{
+      display: flex;
+      width: 204px;
+      height: 204px;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      border-radius: 100px;
+      background-color: #EEEFE7;
+       transition: scale 0.4s ease;
+    }
+
+    .round_button:hover{
+      scale: 1.04; /* Slightly enlarge the button on hover */
+    }
+
+    .detail_button{
+      position: absolute;
+      transition: opacity 0.2s ease, transform 0.1s ease;
+      opacity: 0; /* Hidden by default */
+      pointer-events: none; /* Prevent button from blocking card click */
+      width: 56px;
+      height: 56px;
+    }
+
+    .round_button:hover .arrow-icon-clone {
+      transform: translateY(0);
+      transform: translateX(0);
+    }
+
+    .round_button:hover .arrow-icon {
+      transform: translate(100%, -100%);
+            
+    }
+
+    .workcard:hover .detail_button {
+      opacity: 1; /* Show button on hover */
+    }
+
+    .workcard:hover {
+      scale: 1.04; /* Slightly enlarge the card on hover */
+    }
+
+
+  </style>
+  <body style ="background-color: #10100E">
+    <div class="flex flex-col gap-6 sm:gap-0 items-center">
+      <div class="flex flex-row p-2 sm:p-8 w-full justify-center">
+          <a class="header_logo" href="Portfolio.html">
+            <img src="./assests/icon/DatNgicon.svg" alt="" />
+          </a>  
+      </div>
+
+      <div id="work" class="flex flex-col px-2 sm:px-8 sm:py-16 gap-8 justify-start bg-[#10100E] w-full">
+         <div class="flex flex-row  gap-2 sm:gap-4 items-center">
+          <div class=" heading_2_mobile md:heading_2">CASE STUDY /</div>
+         </div>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <a class="workcard" href="https://www.behance.net/gallery/219015799/FINOURSE-Educational-app" target="_blank">
+            <div style="width: full; aspect-ratio: 16/9;">
+              <img src="./assests/image/Thumbnail.png" alt="" class="size-full object-cover"/>
+            </div>
+            <div class="workcardinfo">
+              <div class="flex justify-between self-stretch items-end">
+                <div class="title_2">FINOURSE</div>
+                <div class="tag">EDUCATION</div>
+              </div>
+              <div class="w-full h-[0.5px] bg-[#636363]"></div>
+              <div class="flex justify-between self-stretch">
+                <div style="color:#a3a3a3" class="body_1">MOBILE APP</div>
+                <div style="color:#a3a3a3"class="body_1">2025</div>
+              </div>
+            </div>
+            <div class="detail_button bg-[#EEEFE7] rounded-full flex justify-center items-center text-[#10100E] text-[16px] font-medium ">
+              DETAIL
+            </div>
+          </a>
+          <a class="workcard" href="https://www.behance.net/gallery/223532859/Re-design-Saigonzoo-website" target="_blank">
+            <div style="width: full; aspect-ratio: 16/9;">
+              <img src="./assests/image/Thumbnail_saigonzoo.png" alt="" class="size-full object-cover"/>
+            </div>
+            <div class="workcardinfo">
+              <div class="flex justify-between self-stretch items-end">
+                <div style="color:#EEEFE7" class="title_2">SAIGONZOO</div>
+                <div class="tag">TOURISM/NATURE</div>
+              </div>
+              <div class="w-full h-[0.5px] bg-[#636363]"></div>
+              <div class="flex justify-between self-stretch">
+                <div style="color:#a3a3a3" class="body_1">WEBSITE</div>
+                <div style="color:#a3a3a3" class="body_1">2025</div>
+              </div>
+            </div>
+            <div class="detail_button bg-[#EEEFE7] rounded-full flex justify-center items-center text-[#10100E] text-[16px] font-medium ">
+              DETAIL
+            </div>
+          </a>
+          <a class="workcard" href="https://www.behance.net/gallery/223777337/ACMOTIVE-Fitness-app" target="_blank">
+            <div style="width: full; aspect-ratio: 16/9;">
+              <img src="./assests/image/1.png" alt="" class="size-full object-cover"/>
+            </div>
+            <div class="workcardinfo">
+              <div class="flex justify-between self-stretch items-end">
+                <div style="color:#EEEFE7" class="title_2">ACMOTIVE</div>
+
+                <div class="tag">HEALTH/SPORT</div>
+              </div>
+              <div class="w-full h-[0.5px] bg-[#636363]"></div>
+              <div class="flex justify-between self-stretch">
+                <div style="color:#a3a3a3" class="body_1">MOBILE APP</div>
+                <div style="color:#a3a3a3" class="body_1">2025</div>
+              </div>
+            </div>
+            <div class="detail_button bg-[#EEEFE7] rounded-full flex justify-center items-center text-[#10100E] text-[16px] font-medium ">
+              DETAIL
+            </div>
+          </a>
+          <a class="workcard" href="https://www.behance.net/gallery/211104213/MotorSoul-Motorcycle-webapp" target="_blank">
+            <div style="height: full; aspect-ratio: 16/9;">
+              <img src="./assests/image/motorsould_thumbnail.png" alt="" class="size-full object-cover"/>
+            </div>
+            <div class="workcardinfo">
+              <div class="flex justify-between self-stretch items-end">
+                <div style="color:#EEEFE7" class="title_2">MOTORSOUL</div>
+
+                <div class="tag">TECH/E-COMMERCE</div>
+              </div>
+              <div class="w-full h-[0.5px] bg-[#636363]"></div>
+              <div class="flex justify-between self-stretch">
+                <div style="color:#a3a3a3" class="body_1">MOBILE APP</div>
+                <div style="color:#a3a3a3" class="body_1">2024</div>
+              </div>
+            </div>
+            <div class="detail_button bg-[#EEEFE7] rounded-full flex justify-center items-center text-[#10100E] text-[16px] font-medium ">
+              DETAIL
+            </div>
+          </a>
+
+        </div>
+      </div> <!-- work -->
+      <div id="work" class="flex flex-col px-2 sm:px-8 sm:py-16 gap-8 justify-start bg-[#10100E] w-full">
+         <div class="flex flex-row  gap-2 sm:gap-4 w-full items-end">
+          <div class="heading_2_mobile md:heading_2">PRODUCT DESIGN /</div>
+
+         </div>
+         <a class="workcard" href="https://hulib.org/" target="_blank">
+            <div style="height: full; aspect-ratio: 16/9;">
+              <img src="./assests/image/hulib_thumbnail.png" alt="" class="size-full object-cover"/>
+            </div>
+            <div class="workcardinfo">
+              <div class="flex justify-between self-stretch items-end">
+                <div style="color:#EEEFE7" class="title_2">HULIB</div>
+
+                <div class="tag">MENTAL HEALTH</div>
+              </div>
+              <div class="w-full h-[0.5px] bg-[#636363]"></div>
+              <div class="flex justify-between self-stretch">
+                <div style="color:#a3a3a3" class="body_1">WEB APP</div>
+                <div style="color:#a3a3a3" class="body_1">2024-2025</div>
+              </div>
+            </div>
+            <div class="detail_button bg-[#EEEFE7] rounded-full flex justify-center items-center text-[#10100E] text-[16px] font-medium ">
+              DETAIL
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/lenis@1.3.3/dist/lenis.min.js"></script> 
+    <script>
+      document.querySelectorAll('.workcard').forEach(card => {
+        const button = card.querySelector('.detail_button');
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left; // Mouse X relative to card
+          const y = e.clientY - rect.top;  // Mouse Y relative to card
+          // Center the button on the cursor, with boundaries
+          const btnWidth = button.offsetWidth;
+          const btnHeight = button.offsetHeight;
+          const maxX = rect.width - btnWidth;
+          const maxY = rect.height - btnHeight;
+          const boundedX = Math.max(0, Math.min(x - btnWidth / 2, maxX));
+          const boundedY = Math.max(0, Math.min(y - btnHeight / 2, maxY));
+          button.style.transform = `translate(${boundedX}px, ${boundedY}px)`;
+        });
+        // Removed 'mouseleave' handler to let CSS handle opacity
+      });
+      let lastScrollY = 0;
+      let currentTranslateY = 0;
+      
+          // Initialize Lenis
+    const lenis = new Lenis({
+      duration: 1.2, // Scroll animation duration in seconds
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function
+      smooth: true, // Enable smooth scrolling
+      smoothTouch: false, // Disable for touch devices (optional)
+      touchMultiplier: 2, // Sensitivity for touch
+    });
+
+    // Animation loop
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    </script>
+  </body>
+</html>

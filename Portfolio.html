@@ -1,0 +1,616 @@
+<html lang="en" class="lenis lenis-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dat Nguyen</title>
+
+    <link rel="icon" type="image/x-icon" href="./assests/icon/DatNgicon_black.svg" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.3/dist/lenis.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script>
+      new WOW().init();
+    </script>
+  </head>
+  <style>
+    .heavy-scroll {
+      /* Ensure the element is positioned to allow transform */
+      position: relative;
+      will-change: transform; /* Optimize for smooth animation */
+      transition: transform 0.1s linear; /* Smooth movement */
+    }
+
+    html{
+      scroll-behavior: smooth;
+    }
+    .firstpara{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      align-self: stretch;
+    }
+    .firstcontainer{
+      display: flex;
+      padding: 0px 32px;
+      flex-direction: column;
+      align-items: center;
+      gap: 244px;
+    }
+
+    .cv_button{
+      background: #10100E;
+      display: flex;
+      width: 218px;
+      padding: 8px 8px 8px 24px;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 50px;
+    }
+
+    .social_button{
+      display: flex; 
+      flex-direction: row;   
+      height: 64px; 
+      width: 124px; 
+      gap: 16px; 
+      border: 1px solid #10100E; 
+      padding: 16px 24px  
+    }
+    .icon-cv-wrapper {
+              position: relative;
+              width: 48px;
+              height: 48px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #EEEFE7;
+              border-radius: 100px;
+              overflow: hidden;
+    }
+    
+    .icon-social-wrapper {
+              position: relative;
+              width: 32px;
+              height: 32px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              overflow: hidden;
+    }
+    .social-icon, .social-icon-clone {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            transition: transform 0.4s ease;
+    }
+    .arrow-icon, .arrow-icon-clone {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            transition: transform 0.4s ease;
+    }
+    .social-icon-clone {
+            transform: translateY(100%);
+    }
+    .social_button:hover .social-icon {
+            transform: translateY(-100%);
+            
+    }
+    .social_button:hover .social-icon-clone {
+            transform: translateY(0);
+            
+    }
+    .arrow-icon-clone {
+            transform: translate(-100%,100%);
+            
+    }
+    .social_button:hover .arrow-icon {
+            transform: translate(100%, -100%);
+            
+    }
+    .social_button:hover .arrow-icon-clone {
+            transform: translateY(0);
+            transform: translateX(0);
+    }
+    
+    .download-icon, .download-icon-clone {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            transition: transform 0.4s ease;
+    }
+    .download-icon-clone {
+            transform: translateY(-120%);
+    }
+    
+
+
+    .cv_button:hover .download-icon {
+            transform: translateY(120%);
+    }
+
+    .cv_button:hover .download-icon-clone {
+            transform: translateY(0);
+    }
+
+    .workcard{
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 16px;
+
+      gap: 8px;
+      transition: scale 0.4s ease
+    }
+    .workcardinfo{
+      display:flex;
+      flex-direction: column;
+      padding: 16px 0px;
+      gap: 16px;
+    }
+    .contactinfo{
+      display:flex;
+      flex-direction: row;
+      padding: 8px 0px;
+      gap: 16px;   
+    }
+    .skill_container{
+      display:flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+      gap: 8px;
+      width:100%;
+    }
+    .infor_skill_container{
+      display:flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+      gap: 16px;
+      height: 80px;
+      overflow: hidden;
+      transition: height 0.4s ease, opacity 0.5s ease;
+    }
+    .skill-icon{
+      width: 32px;
+      height: 32px;
+      transition: transform 0.4s ease;
+    }
+    .skill_container:hover .infor_skill_container {
+       height: 204px;
+    }
+    .skill_container:hover .skill-icon {
+      transform: rotate(-90deg);
+    }
+
+    .tag{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      background-color: #a3a3a3;
+      padding: 8px 16px;
+      font-family: 'Be Vietnam Pro';
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: #10100E;
+    }
+
+    .round_button{
+      display: flex;
+      width: 204px;
+      height: 204px;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      border-radius: 100px;
+      background-color: #EEEFE7;
+       transition: scale 0.4s ease;
+    }
+
+    .round_button:hover{
+      scale: 1.04; /* Slightly enlarge the button on hover */
+    }
+
+    .detail_button{
+      position: absolute;
+      transition: opacity 0.2s ease, transform 0.1s ease;
+      opacity: 0; /* Hidden by default */
+      pointer-events: none; /* Prevent button from blocking card click */
+      width: 56px;
+      height: 56px;
+    }
+
+    .round_button:hover .arrow-icon-clone {
+      transform: translateY(0);
+      transform: translateX(0);
+    }
+
+    .round_button:hover .arrow-icon {
+      transform: translate(100%, -100%);
+            
+    }
+
+    .workcard:hover .detail_button {
+      opacity: 1; /* Show button on hover */
+    }
+
+    .workcard:hover {
+      scale: 1.04; /* Slightly enlarge the card on hover */
+    }
+
+    .introduce_container{
+
+    }
+
+
+  </style>
+  <body style ="background-color: #EEEFE7">
+    <div class="flex flex-col gap-16 sm:gap-0 items-center">
+      <div id="top" class="flex flex-row p-2 sm:p-8 w-full justify-between items-start">
+        <div class="flex justify-center items-center gap-4 sm:gap-16">
+          <div class="header_logo">
+            <img src="./assests/icon/datnguyen_black.svg" alt="" />
+          </div>
+            <div class="body_1">[UI/UX DESIGNER]</div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-stretch gap-4 sm:gap-16">
+
+          <a class="hover-text body_1" href="#work">
+              <span class="top">WORK</span>
+              <span class="bottom">MARVEL</span>
+          </a>
+          <a class="hover-text body_1">
+            <span class="top">ABOUT ME</span>
+            <span class="bottom">MEDIOCRE</span>
+          </a>
+          <a class="hover-text body_1" href="#contact">
+            <span class="top">CONTACT</span>
+            <span class="bottom">WELCOME</span>
+          </a>
+        </div>  
+      </div>
+      <div class="h-svh w-full flex flex-col px-2 sm:px-8 py-1 sm:py-28 items-center justify-end  gap-2 sm:gap-10 sticky top-0 z-0">
+        <div class="flex flex-col gap-2 items-center w-full">
+          <div class="w-full h-full overflow-hidden">
+            <img src="./assests/icon/DATNGUYEN.svg" alt="" class="w-full h-full object-cover animate-transform" />
+          </div>
+          </div>
+          <div class=" flex flex-col sm:flex-row justify-between sm:items-end w-full gap-4 items-center sm:justify-between animate-fadeIn origin-center">
+
+              <div class="w-[240px] sm:w-[344px] h-auto order-2 sm:order-1 overflow-hidden animate-scale origin-tops">
+                <img src="./assests/image/anhcanhan1.jpg" alt="" />
+              </div>
+
+            <div class="flex flex-col h-full items-center gap-2 sm:justify-between  order-1 sm:order-2 overflow-hidden animate-transform">
+              <div class="body_2_mobile sm:body_2">I design mobile applications, websites that balance between delightful interface and utilized user experience.</div>
+              <a href="./assests/CV/CV_UIUXdesigner_NguyenTatDat.pdf" download="CV_UIUXdesigner_NguyenTatDat.pdf" class ="cv_button">
+                <span style="color:#EEEFE7" class="button">MY CV</span>
+                <div class="icon-cv-wrapper">
+                  <img
+                    src="./assests/icon/ArrowLineDown.svg"
+                    alt="Download icon" class="download-icon" />
+                  <img
+                    src="./assests/icon/ArrowLineDown.svg"
+                    alt="Download icon" class="download-icon-clone" />
+                </div>
+              </a>
+            </div>
+            <div class="flex flex-row sm:flex-col gap-4 w-full sm:w-[344px] justify-center sm:items-end order-3 overflow-hidden animate-transform">
+              <a class="social_button" href="https://www.behance.net/tttnguyn1" target="_blank">
+                <div class="icon-social-wrapper">  
+                  <img
+                    src="./assests/icon/BehanceLogo.svg"
+                    alt="" class="social-icon" />                
+                  <img
+                    src="./assests/icon/BehanceLogo.svg"
+                    alt="" class="social-icon-clone" />
+                </div>  
+                <div class="icon-social-wrapper">
+                  <img
+                    src="./assests/icon/ArrowUpRight.svg"
+                    alt="" class="arrow-icon" />
+                  <img
+                    src="./assests/icon/ArrowUpRight.svg"
+                    alt="" class="arrow-icon-clone" />
+                </div>
+              </a>
+              <a class="social_button" href="https://www.facebook.com/dat.nguyentatdat" target="_blank">
+                <div class="icon-social-wrapper">  
+                  <img
+                    src="./assests/icon/FacebookLogo.svg"
+                    alt="" class="social-icon" />                
+                  <img
+                    src="./assests/icon/FacebookLogo.svg"
+                    alt="" class="social-icon-clone" />
+                </div>  
+                <div class="icon-social-wrapper">
+                  <img
+                    src="./assests/icon/ArrowUpRight.svg"
+                    alt="" class="arrow-icon" />
+                  <img
+                    src="./assests/icon/ArrowUpRight.svg"
+                    alt="" class="arrow-icon-clone" />
+                </div>
+              </a>
+              <a class="social_button" href="https://www.linkedin.com/in/dattatnguyen134/" target="_blank">
+                <div class="icon-social-wrapper">  
+                  <img
+                    src="./assests/icon/LinkedinLogo.svg"
+                    alt="" class="social-icon" />                
+                  <img
+                    src="./assests/icon/LinkedinLogo.svg"
+                    alt="" class="social-icon-clone" />
+                </div>  
+                <div class="icon-social-wrapper">
+                  <img
+                    src="./assests/icon/ArrowUpRight.svg"
+                    alt="" class="arrow-icon" />
+                  <img
+                    src="./assests/icon/ArrowUpRight.svg"
+                    alt="" class="arrow-icon-clone" />
+                </div>
+              </a>
+          </div>
+        </div>
+
+
+      </div> <!-- introduce -->
+
+      <div class="flex flex-col sm:flex-row gap-[72px] sm:h-svh px-2 sm:px-8 p-4 sm:items-center w-full sm:gap-[360px] items-start sm:justify-between z-10 rounded-t-3xl bg-[#10100E]">
+         <div class="flex flex-col  gap-2 sm:gap-4 items-center">
+          <div class=" heading_2_mobile md:heading_2">HOW I CAN</div>
+          <div class=" heading_2_mobile md:heading_2">HELP YOU /</div>
+         </div>
+        <div class="flex flex-col gap-16 w-full justify-start">
+          <div class="skill_container">
+            <div class="infor_skill_container">
+              <div class="flex flex-row gap-4 items-center">
+                <div class ="title_1_mobile sm:title_1">UI design</div>
+                <img src="./assests/icon/CaretDown.svg" class="skill-icon">               
+              </div>
+              <div class="body_3">Specialize in designing mobile and web interfaces that align seamlessly with any brand or visual style. Proficient in <span style="color:#EEEFE7; font-weight: 600;">Figma</span> , <span style="color:#EEEFE7; font-weight: 600;">Photoshop</span>, and <span style="color:#EEEFE7; font-weight: 600;">Illustrator</span>, I adapt my design approach to match diverse aesthetics and user needs.</div>
+            </div>
+            <div class="w-full h-[0.5px] bg-[#636363]"></div>
+          </div>
+          <div class="skill_container">
+            <div class="infor_skill_container">
+              <div class="flex flex-row gap-4 items-center">
+                <div class ="title_1_mobile sm:title_1">UX design</div>
+                <img src="./assests/icon/CaretDown.svg" class="skill-icon">               
+              </div>
+              <div class="body_3">I conduct user research, define problems, and deliver design solutions through clear information architecture, sitemaps, and user flows—applying both <span style="color:#EEEFE7; font-weight: 600;">user-centered design principles</span> and <span style="color:#EEEFE7; font-weight: 600;">design thinking frameworks</span>.</div>
+            </div>
+            <div class="w-full h-[0.5px] bg-[#636363]"></div>
+          </div>
+          <div class="skill_container">
+            <div class="infor_skill_container">
+              <div class="flex flex-row gap-4 items-center">
+                <div class ="title_1_mobile sm:title_1">Motion/Prototype</div>
+                <img src="./assests/icon/CaretDown.svg" class="skill-icon">               
+              </div>
+              <div class="body_3">Skilled in creating interactive prototypes, custom icons, flash screen animations, and product showreels to enhance user experience and product presentation. Tool use: <span style="color:#EEEFE7; font-weight: 600;">Lottiefile</span>, <span style="color:#EEEFE7; font-weight: 600;">Protopie</span> and <span style="color:#EEEFE7; font-weight: 600;">After Effects</span></div>
+            </div>
+            <div class="w-full h-[0.5px] bg-[#636363]"></div>
+          </div>
+          <div class="skill_container">
+            <div class="infor_skill_container">
+              <div class="flex flex-row gap-4 items-center">
+                <div class ="title_1_mobile sm:title_1">Front-end development</div>
+                <img src="./assests/icon/CaretDown.svg" class="skill-icon">               
+              </div>
+              <div class="body_3">Familiar with <span style="color:#EEEFE7; font-weight: 600;">HTML</span>, and <span style="color:#EEEFE7; font-weight: 600;">CSS</span> allows me to bridge the gap between design and development, ensuring smoother handoffs and more practical design solutions.</div>
+            </div>
+            <div class="w-full h-[0.5px] bg-[#636363]"></div>
+          </div>
+          <!-- <div class="flex flex-col w-full h-[80px] justify-between items-start gap-3"> -->
+            <!-- <div class="flex h-[64px] justify-between items-center w-full">
+              <div class="flex justify-between items-center">
+                <div class="flex flex-row gap-4 items-center">
+                  <img src="./assests/icon/ri_figma-fill.svg" alt="" />
+                  <img src="./assests/icon/file-icons_adobe-illustrator.svg" alt="" />
+                  <img src="./assests/icon/file-icons_adobe-photoshop.svg" alt="" />
+                </div>
+              </div>
+              <div class="flex flex-row gap-4 items-center">
+                <img src="./assests/icon/CaretDown.svg" alt="" class="rotate-90" />
+                <div class ="title_1">UI design</div>
+              </div>
+            </div>
+            <div class="w-full h-[0.5px] bg-[#636363]"></div>
+          </div> -->
+
+
+
+        </div>
+       </div>
+      </div> <!-- skill -->
+
+      <div id="work" class="flex flex-col px-2 sm:px-8 py-32 gap-8 justify-start bg-[#10100E] w-full">
+         <div class="flex flex-row  gap-2 sm:gap-4 items-center">
+          <div class=" heading_2_mobile md:heading_2">SELECTED WORK /</div>
+         </div>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <a class="workcard" href="https://www.behance.net/gallery/219015799/FINOURSE-Educational-app" target="_blank">
+            <div style="width: full; aspect-ratio: 16/9;">
+              <img src="./assests/image/Thumbnail.png" alt="" class="size-full object-cover"/>
+            </div>
+            <div class="workcardinfo">
+              <div class="flex justify-between self-stretch items-end">
+                <div class="title_2">FINOURSE</div>
+                <div class="tag">EDUCATION</div>
+              </div>
+              <div class="w-full h-[0.5px] bg-[#636363]"></div>
+              <div class="flex justify-between self-stretch">
+                <div style="color:#a3a3a3" class="body_1">MOBILE APP</div>
+                <div style="color:#a3a3a3"class="body_1">2025</div>
+              </div>
+            </div>
+            <div class="detail_button bg-[#EEEFE7] rounded-full flex justify-center items-center text-[#10100E] text-[16px] font-medium ">
+              DETAIL
+            </div>
+          </a>
+          <a class="workcard" href="https://www.behance.net/gallery/223532859/Re-design-Saigonzoo-website" target="_blank">
+            <div style="width: full; aspect-ratio: 16/9;">
+              <img src="./assests/image/Thumbnail_saigonzoo.png" alt="" class="size-full object-cover"/>
+            </div>
+            <div class="workcardinfo">
+              <div class="flex justify-between self-stretch items-end">
+                <div style="color:#EEEFE7" class="title_2">SAIGONZOO</div>
+                <div class="tag">TOURISM/NATURE</div>
+              </div>
+              <div class="w-full h-[0.5px] bg-[#636363]"></div>
+              <div class="flex justify-between self-stretch">
+                <div style="color:#a3a3a3" class="body_1">WEBSITE</div>
+                <div style="color:#a3a3a3" class="body_1">2025</div>
+              </div>
+            </div>
+            <div class="detail_button bg-[#EEEFE7] rounded-full flex justify-center items-center text-[#10100E] text-[16px] font-medium ">
+              DETAIL
+            </div>
+          </a>
+          <a class="workcard" href="https://www.behance.net/gallery/223777337/ACMOTIVE-Fitness-app" target="_blank">
+            <div style="width: full; aspect-ratio: 16/9;">
+              <img src="./assests/image/1.png" alt="" class="size-full object-cover"/>
+            </div>
+            <div class="workcardinfo">
+              <div class="flex justify-between self-stretch items-end">
+                <div style="color:#EEEFE7" class="title_2">ACMOTIVE</div>
+
+                <div class="tag">HEALTH/SPORT</div>
+              </div>
+              <div class="w-full h-[0.5px] bg-[#636363]"></div>
+              <div class="flex justify-between self-stretch">
+                <div style="color:#a3a3a3" class="body_1">MOBILE APP</div>
+                <div style="color:#a3a3a3" class="body_1">2025</div>
+              </div>
+            </div>
+            <div class="detail_button bg-[#EEEFE7] rounded-full flex justify-center items-center text-[#10100E] text-[16px] font-medium ">
+              DETAIL
+            </div>
+          </a>
+          <div class="flex justify-center items-center">
+            <a class="round_button" href="Work.html">
+              <div class="button">SEE MORE</div>
+              <div class="icon-social-wrapper">
+                <img
+                  src="./assests/icon/ArrowUpRight.svg"
+                  alt="" class="arrow-icon" />
+                <img
+                  src="./assests/icon/ArrowUpRight.svg"
+                  alt="" class="arrow-icon-clone" />
+              </div> 
+            </a>
+          </div>
+        </div>
+      </div> <!-- work -->
+      
+
+      <div id="contact" class="flex flex-col w-full bg-[#EEEFE7] p-2 sm:p-8  gap-2 sm:gap-[48px] items-center">
+        <div class="flex flex-col sm:flex-row w-full items-center sm:justify-between">
+          <div style = "width: 386px; aspect-ratio: 16/9;">
+            <img src="./assests/image/anhcanhan3.png" alt="" />
+          </div>
+          <div class="flex flex-col gap-[52px] w-[984px]">
+            <div style="text-align: center; font-family: 'Clash Display' ; font-size: 116px; font-weight: 600; line-height: 100%; color: #10100E; ">Ready For Any Challenge</div>
+            <div style="text-align: center; font-family: 'Be Vietnam Pro' ; font-size: 20px; font-weight: 400; line-height: 100%; color: #686861;">Contact me via</div>
+          </div>
+          <div class=" w-[4px] sm:w-[386px] aspect-ratio-[16/9]">
+
+         </div>
+        </div>
+        <div class="flex flex-col justify-between items-center w-full">
+          <div class="flex flex-row w-full justify-between">
+              <img src="./assests/icon/Vector6.svg" alt="Arrow Line Down" />
+              <img src="./assests/icon/Vector8.svg" alt="Arrow Line Down" />
+          </div>
+          <div class="flex flex-col sm:flex-row w-full px-8 justify-between">
+            <div class="contactinfo">
+              <img src="./assests/icon/mail.svg" alt=""/>
+              <div class="contact">datnguyen.vnt@gmail.com</div>
+            </div>
+            <div class="contactinfo">
+              <img src="./assests/icon/phone.svg" alt="" />
+              <div class="contact">(+84)964 359 167</div>
+            </div>
+              
+          </div>
+          <div class="flex flex-row w-full justify-between">
+              <img src="./assests/icon/Vector7.svg" alt="Arrow Line Down" />
+              <img src="./assests/icon/Vector9.svg" alt="Arrow Line Down" />
+          </div>
+        </div>
+        <div class="w-full h-[0.5px] bg-[#cccccc]"></div>
+        <div class="flex flex-col items-center gap-4">
+        <div style="text-align: center; font-family: 'Be Vietnam Pro' ; font-size: 20px; font-weight: 400; line-height: 100%; color: #686861;">Present 24/24 on</div>
+          <div class="flex flex-col items-center gap-2">
+            <a class="hover-text-social body_2" href="https://www.facebook.com/dat.nguyentatdat" target="_blank">
+                <span  class="top">Facebook</span>
+                <span  class="bottom">Facebook</span>
+            </a>
+            <a class="hover-text-social body_2" href="https://www.instagram.com/tatdatishere/" target="_blank">
+              <span class="top">Instagram</span>
+              <span class="bottom">Instagram</span>
+            </a>
+            <a class="hover-text-social body_2" href="https://www.linkedin.com/in/dattatnguyen134/" target="_blank">
+              <span class="top">Linkedin</span>
+              <span class="bottom">Linkedin</span>
+            </a>
+          </div>
+        </div>
+        <a class="flex w-11 h-11 p-[6px] justify-center items-center rounded-full bg-[#10100E]" href="#top">
+          <img
+            src="./assests/icon/ArrowUp.svg"
+            alt="Arrow Line Down"
+          />
+        </a>
+      </div>
+    </div>
+    <script src="https://unpkg.com/lenis@1.3.3/dist/lenis.min.js"></script> 
+    <script>
+      document.querySelectorAll('.workcard').forEach(card => {
+        const button = card.querySelector('.detail_button');
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left; // Mouse X relative to card
+          const y = e.clientY - rect.top;  // Mouse Y relative to card
+          // Center the button on the cursor, with boundaries
+          const btnWidth = button.offsetWidth;
+          const btnHeight = button.offsetHeight;
+          const maxX = rect.width - btnWidth;
+          const maxY = rect.height - btnHeight;
+          const boundedX = Math.max(0, Math.min(x - btnWidth / 2, maxX));
+          const boundedY = Math.max(0, Math.min(y - btnHeight / 2, maxY));
+          button.style.transform = `translate(${boundedX}px, ${boundedY}px)`;
+        });
+        // Removed 'mouseleave' handler to let CSS handle opacity
+      });
+      let lastScrollY = 0;
+      let currentTranslateY = 0;
+      
+          // Initialize Lenis
+    const lenis = new Lenis({
+      duration: 1.2, // Scroll animation duration in seconds
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function
+      smooth: true, // Enable smooth scrolling
+      smoothTouch: false, // Disable for touch devices (optional)
+      touchMultiplier: 2, // Sensitivity for touch
+    });
+
+    // Animation loop
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    </script>
+  </body>
+</html>
