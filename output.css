@@ -1098,6 +1098,11 @@ video {
   padding-right: 0.5rem;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1248,7 +1253,7 @@ video {
 
 .body_1 {
   color: #10100E;
-  font-family: "Be Vietnam Pro";
+  font-family: "Be Vietnam Pro", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1260,7 +1265,7 @@ video {
   color: #10100E;
   width: 600px;
   text-align: center;
-  font-family: "Be Vietnam Pro";
+  font-family: "Be Vietnam Pro", sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
@@ -1272,7 +1277,7 @@ video {
   color: #10100E;
   width: 400px;
   text-align: center;
-  font-family: "Be Vietnam Pro";
+  font-family: "Be Vietnam Pro", sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
@@ -1284,7 +1289,7 @@ video {
   color: #a3a3a3;
   width: 640px;
   text-align: left;
-  font-family: "Be Vietnam Pro";
+  font-family: "Be Vietnam Pro", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -1294,7 +1299,7 @@ video {
 
 .button{
   color: #10100E;
-  font-family: "Be Vietnam Pro";
+  font-family: "Be Vietnam Pro", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -1302,25 +1307,12 @@ video {
   /* 24px */
 }
 
-.heading_1{
-  background: linear-gradient(0deg, #10100E 0%, #10100E 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: "Clash Display";
-  font-size: 240px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 100%;
-  /* 213px */
-}
-
 .heading_2{
   background: linear-gradient(180deg, #a3a3a3 0%, #a3a3a3 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Clash Display";
+  font-family: 'Clash Display', sans-serif;
   font-size: 120px;
   font-style: normal;
   font-weight: 600;
@@ -1333,7 +1325,7 @@ video {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Clash Display";
+  font-family: 'Clash Display', sans-serif;
   font-size: 52px;
   font-style: normal;
   font-weight: 600;
@@ -1343,7 +1335,7 @@ video {
 
 .heading_3{
   color: #EEEFE7;
-  font-family: "Be Vietnam Pro";
+  font-family: "Be Vietnam Pro", sans-serif;
   font-size: 64px;
   font-style: normal;
   font-weight: 400;
@@ -1354,7 +1346,7 @@ video {
 .title_1{
   color: #EEEFE7;
   text-align: right;
-  font-family: "Be Vietnam Pro";
+  font-family: "Be Vietnam Pro", sans-serif;
   font-size: 68px;
   font-style: normal;
   font-weight: 400;
@@ -1366,7 +1358,7 @@ video {
 .title_1_mobile{
   color: #EEEFE7;
   text-align: right;
-  font-family: "Be Vietnam Pro";
+  font-family: "Be Vietnam Pro", sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 400;
@@ -1377,7 +1369,7 @@ video {
 
 .title_2{
   color: #EEEFE7;
-  font-family: "Clash Display";
+  font-family: 'Clash Display', sans-serif;
   font-size: 64px;
   font-style: normal;
   font-weight: 500;
@@ -1385,9 +1377,29 @@ video {
   /* 64px */
 }
 
+.title_2_mobile{
+  color: #EEEFE7;
+  font-family: 'Clash Display', sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  /* 64px */
+}
+
+.heading_4_mobile{
+  text-align: center;
+  font-family: 'Clash Display' ;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 100%;
+  color: #10100E;
+  width: 640px;
+}
+
 .contact{
   color: #10100E;
-  font-family: "Be Vietnam Pro";
+  font-family: "Be Vietnam Pro", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -1411,6 +1423,26 @@ video {
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+
+  src: url('/assests/fonts/ClashDisplay-Medium.woff2') format('woff2');
+
+  font-weight: 500;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+
+  src: url('/assests/fonts/ClashDisplay-SemiBold.woff2') format('woff2');
+
+  font-weight: 600;
+
+  font-style: normal;
 }
 
 @media (min-width: 640px) {
@@ -1529,7 +1561,7 @@ video {
     color: #10100E;
     width: 600px;
     text-align: center;
-    font-family: "Be Vietnam Pro";
+    font-family: "Be Vietnam Pro", sans-serif;
     font-size: 28px;
     font-style: normal;
     font-weight: 400;
@@ -1540,13 +1572,33 @@ video {
   .sm\:title_1{
     color: #EEEFE7;
     text-align: right;
-    font-family: "Be Vietnam Pro";
+    font-family: "Be Vietnam Pro", sans-serif;
     font-size: 68px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
     /* 68px */
     letter-spacing: -3.4px;
+  }
+
+  .sm\:title_2{
+    color: #EEEFE7;
+    font-family: 'Clash Display', sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 64px */
+  }
+
+  .sm\:heading_4{
+    text-align: center;
+    font-family: 'Clash Display' ;
+    font-size: 116px;
+    font-weight: 600;
+    line-height: 100%;
+    color: #10100E;
+    width: 1200px;
   }
 
   @media (min-width: 768px) {
@@ -1570,7 +1622,7 @@ video {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: "Clash Display";
+    font-family: 'Clash Display', sans-serif;
     font-size: 120px;
     font-style: normal;
     font-weight: 600;
