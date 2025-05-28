@@ -1389,7 +1389,7 @@ video {
 
 .heading_4_mobile{
   text-align: center;
-  font-family: 'Clash Display' ;
+  font-family: 'Clash Display', sans-serif ;
   font-size: 52px;
   font-weight: 600;
   line-height: 100%;
@@ -1593,7 +1593,7 @@ video {
 
   .sm\:heading_4{
     text-align: center;
-    font-family: 'Clash Display' ;
+    font-family: 'Clash Display', sans-serif ;
     font-size: 116px;
     font-weight: 600;
     line-height: 100%;
