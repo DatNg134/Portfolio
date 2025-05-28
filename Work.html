@@ -17,12 +17,6 @@
     </script>
   </head>
   <style>
-    .heavy-scroll {
-      /* Ensure the element is positioned to allow transform */
-      position: relative;
-      will-change: transform; /* Optimize for smooth animation */
-      transition: transform 0.1s linear; /* Smooth movement */
-    }
 
     html{
       scroll-behavior: smooth;
@@ -195,7 +189,7 @@
       border-radius: 100px;
       background-color: #a3a3a3;
       padding: 8px 16px;
-      font-family: 'Be Vietnam Pro';
+      font-family: "Be Vietnam Pro", sans-serif;
       font-size: 16px;
       font-weight: 500;
       line-height: 100%;
@@ -250,13 +244,25 @@
   </style>
   <body style ="background-color: #10100E">
     <div class="flex flex-col gap-6 sm:gap-0 items-center">
-      <div class="flex flex-row p-2 sm:p-8 w-full justify-center">
+      <div class="flex flex-row p-2 sm:p-4 justify-center gap-16 fixed mt-2 bg-[#10100E] rounded-2xl" >
           <a class="header_logo" href="index.html">
             <img src="./assests/icon/DatNgicon.svg" alt="" />
-          </a>  
+          </a>
+          <div class="flex flex-col sm:flex-row items-stretch gap-4 sm:gap-16">
+            <a style="color:#EEEFE7" class="hover-text body_1" href="#case study">
+                <span class="top">STUDY</span>
+                <span class="bottom">STUDY</span>
+            </a>
+            <a style="color:#EEEFE7" class="hover-text body_1" href="#product design">
+              <span class="top">PRODUCT</span>
+              <span class="bottom">PRODUCT</span>
+            </a>
+          </div>   
       </div>
 
-      <div id="work" class="flex flex-col px-2 sm:px-8 sm:py-16 gap-8 justify-start bg-[#10100E] w-full">
+      <div class="w-full h-[40px]"></div>
+
+      <div id="case study" class="flex flex-col px-2 sm:px-8 sm:py-16 gap-8 justify-start bg-[#10100E] w-full">
          <div class="flex flex-row  gap-2 sm:gap-4 items-center">
           <div class=" heading_2_mobile md:heading_2">CASE STUDY /</div>
          </div>
@@ -342,7 +348,7 @@
 
         </div>
       </div> <!-- work -->
-      <div id="work" class="flex flex-col px-2 sm:px-8 sm:py-16 gap-8 justify-start bg-[#10100E] w-full">
+      <div id="product design" class="flex flex-col px-2 sm:px-8 sm:py-16 gap-8 justify-start bg-[#10100E] w-full">
          <div class="flex flex-row  gap-2 sm:gap-4 w-full items-end">
           <div class="heading_2_mobile md:heading_2">PRODUCT DESIGN /</div>
 
@@ -375,7 +381,6 @@
             <div class="workcardinfo">
               <div class="flex justify-between self-stretch items-end">
                 <div style="color:#EEEFE7" class="title_2">ITBee Solutions homepage</div>
-
                 <div class="tag">TECH</div>
               </div>
               <div class="w-full h-[0.5px] bg-[#636363]"></div>
