@@ -252,6 +252,11 @@
     .workcard:hover {
       scale: 1.04; /* Slightly enlarge the card on hover */
     }
+    .worksection{
+      transition: transform 0.8s ease; /* Smooth transition for scaling and movement */
+    transform-origin: center top; /* Scale from the top-center */
+    }
+
 
 
   </style>
@@ -434,85 +439,87 @@
         </div>
        </div>
       </div> <!-- skill -->
-
-      <div id="work" class="flex flex-col px-2 sm:px-8 py-32 gap-12 justify-start bg-[#21201C] w-full rounded-b-3xl">
-         <div class="flex flex-row  gap-2 sm:gap-4 items-center">
-          <div class=" heading_2_mobile md:heading_2">SELECTED WORK</div>
-         </div>
-        <div class="grid sm:grid-cols-2 gap-8">
-          <a class="workcard" href="https://www.behance.net/gallery/219015799/FINOURSE-Educational-app" target="_blank">
-            <div style="width: full; aspect-ratio: 16/9;">
-              <img src="./assests/image/Thumbnail.png" alt="" class="size-full object-cover"/>
-            </div>
-            <div class="workcardinfo">
-              <div class="flex justify-between self-stretch items-end">
-                <div class="title_2_mobile sm:title_2">FINOURSE</div>
-                <div class="tag">EDUCATION</div>
-              </div>
-              <div class="w-full h-[0.5px] bg-[#62605B]"></div>
-              <div class="flex justify-between self-stretch">
-                <div style="color:#B5B3AD" class="body_1">MOBILE APP</div>
-                <div style="color:#B5B3AD"class="body_1">2025</div>
-              </div>
-            </div>
-            <div class="detail_button bg-[#FDFDFC] rounded-full flex justify-center items-center text-[#21201C] text-[12px] font-medium ">
-              DETAIL
-            </div>
-          </a>
-          <a class="workcard" href="https://www.behance.net/gallery/223532859/Re-design-Saigonzoo-website" target="_blank">
-            <div style="width: full; aspect-ratio: 16/9;">
-              <img src="./assests/image/Thumbnail_saigonzoo.png" alt="" class="size-full object-cover"/>
-            </div>
-            <div class="workcardinfo">
-              <div class="flex justify-between self-stretch items-end">
-                <div style="color:#FDFDFC" class="title_2_mobile sm:title_2">SAIGONZOO</div>
-                <div class="tag">TOURISM/NATURE</div>
-              </div>
-              <div class="w-full h-[0.5px] bg-[#62605B]"></div>
-              <div class="flex justify-between self-stretch">
-                <div style="color:#B5B3AD" class="body_1">WEBSITE</div>
-                <div style="color:#B5B3AD" class="body_1">2025</div>
-              </div>
-            </div>
-            <div class="detail_button bg-[#FDFDFC] rounded-full text-[#21201C] text-[12px] font-medium ">
-              <span>DETAIL</span>
-            </div>
-          </a>
-          <a class="workcard" href="https://www.behance.net/gallery/223777337/ACMOTIVE-Fitness-app" target="_blank">
-            <div style="width: full; aspect-ratio: 16/9;">
-              <img src="./assests/image/1.png" alt="" class="size-full object-cover"/>
-            </div>
-            <div class="workcardinfo">
-              <div class="flex justify-between self-stretch items-end">
-                <div style="color:#FDFDFC" class="title_2_mobile sm:title_2">ACMOTIVE</div>
-
-                <div class="tag">HEALTH/SPORT</div>
-              </div>
-              <div class="w-full h-[0.5px] bg-[#62605B]"></div>
-              <div class="flex justify-between self-stretch">
-                <div style="color:#B5B3AD" class="body_1">MOBILE APP</div>
-                <div style="color:#B5B3AD" class="body_1">2025</div>
-              </div>
-            </div>
-            <div class="detail_button bg-[#FDFDFC] rounded-full flex justify-center items-center text-[#21201C] text-[12px] font-medium ">
-              DETAIL
-            </div>
-          </a>
-          <div class="flex justify-center items-center">
-            <a class="round_button" href="Work.html">
-              <div class="button">SEE MORE</div>
-              <div class="icon-social-wrapper">
-                <img
-                  src="./assests/icon/ArrowUpRight.svg"
-                  alt="" class="arrow-icon" />
-                <img
-                  src="./assests/icon/ArrowUpRight.svg"
-                  alt="" class="arrow-icon-clone" />
-              </div> 
-            </a>
+      <section class="worksection">
+        <div id="work" class="flex flex-col px-2 sm:px-8 py-32 gap-12 justify-start bg-[#21201C] w-full rounded-b-3xl">
+          <div class="flex flex-row  gap-2 sm:gap-4 items-center">
+            <div class=" heading_2_mobile md:heading_2">SELECTED WORK</div>
           </div>
-        </div>
-      </div> <!-- work -->
+          <div class="grid sm:grid-cols-2 gap-8">
+            <a class="workcard" href="https://www.behance.net/gallery/219015799/FINOURSE-Educational-app" target="_blank">
+              <div style="width: full; aspect-ratio: 16/9;">
+                <img src="./assests/image/Thumbnail.png" alt="" class="size-full object-cover"/>
+              </div>
+              <div class="workcardinfo">
+                <div class="flex justify-between self-stretch items-end">
+                  <div class="title_2_mobile sm:title_2">FINOURSE</div>
+                  <div class="tag">EDUCATION</div>
+                </div>
+                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                <div class="flex justify-between self-stretch">
+                  <div style="color:#B5B3AD" class="body_1">MOBILE APP</div>
+                  <div style="color:#B5B3AD"class="body_1">2025</div>
+                </div>
+              </div>
+              <div class="detail_button bg-[#FDFDFC] rounded-full flex justify-center items-center text-[#21201C] text-[12px] font-medium ">
+                DETAIL
+              </div>
+            </a>
+            <a class="workcard" href="https://www.behance.net/gallery/223532859/Re-design-Saigonzoo-website" target="_blank">
+              <div style="width: full; aspect-ratio: 16/9;">
+                <img src="./assests/image/Thumbnail_saigonzoo.png" alt="" class="size-full object-cover"/>
+              </div>
+              <div class="workcardinfo">
+                <div class="flex justify-between self-stretch items-end">
+                  <div style="color:#FDFDFC" class="title_2_mobile sm:title_2">SAIGONZOO</div>
+                  <div class="tag">TOURISM/NATURE</div>
+                </div>
+                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                <div class="flex justify-between self-stretch">
+                  <div style="color:#B5B3AD" class="body_1">WEBSITE</div>
+                  <div style="color:#B5B3AD" class="body_1">2025</div>
+                </div>
+              </div>
+              <div class="detail_button bg-[#FDFDFC] rounded-full text-[#21201C] text-[12px] font-medium ">
+                <span>DETAIL</span>
+              </div>
+            </a>
+            <a class="workcard" href="https://www.behance.net/gallery/223777337/ACMOTIVE-Fitness-app" target="_blank">
+              <div style="width: full; aspect-ratio: 16/9;">
+                <img src="./assests/image/1.png" alt="" class="size-full object-cover"/>
+              </div>
+              <div class="workcardinfo">
+                <div class="flex justify-between self-stretch items-end">
+                  <div style="color:#FDFDFC" class="title_2_mobile sm:title_2">ACMOTIVE</div>
+
+                  <div class="tag">HEALTH/SPORT</div>
+                </div>
+                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                <div class="flex justify-between self-stretch">
+                  <div style="color:#B5B3AD" class="body_1">MOBILE APP</div>
+                  <div style="color:#B5B3AD" class="body_1">2025</div>
+                </div>
+              </div>
+              <div class="detail_button bg-[#FDFDFC] rounded-full flex justify-center items-center text-[#21201C] text-[12px] font-medium ">
+                DETAIL
+              </div>
+            </a>
+            <div class="flex justify-center items-center">
+              <a class="round_button" href="Work.html">
+                <div class="button">SEE MORE</div>
+                <div class="icon-social-wrapper">
+                  <img
+                    src="./assests/icon/ArrowUpRight.svg"
+                    alt="" class="arrow-icon" />
+                  <img
+                    src="./assests/icon/ArrowUpRight.svg"
+                    alt="" class="arrow-icon-clone" />
+                </div> 
+              </a>
+            </div>
+          </div>
+        </div> <!-- work -->       
+      </section>
+
       
 
       <div id="contact" class="flex flex-col w-full bg-[#FDFDFC] p-2 sm:p-8  gap-2 sm:gap-[48px] items-center">
@@ -612,6 +619,45 @@
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const heroSection = document.querySelector('.worksection');
+        let lastScrollY = window.scrollY; // Track previous scroll position
+        let isScaled = false; // Track if section is already scaled
+
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            const sectionRect = heroSection.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const threshold = 50; // Pixels from bottom to trigger "nearly off"
+
+            // Detect scroll direction
+            if (currentScrollY > lastScrollY) {
+                // Scrolling down
+                if (!isScaled && sectionRect.bottom <= windowHeight ) {
+                    // Bottom is nearly off the screen (within 50px of viewport bottom)
+                    heroSection.style.transform = 'scale(0.98) translateY(-50px)';
+                    isScaled = true;
+                }
+            } else if (currentScrollY < lastScrollY) {
+                // Scrolling up
+                if (isScaled && sectionRect.bottom >= windowHeight - 200) {
+                    // Bottom is slowly entering the viewport (within 50px of viewport bottom)
+                    heroSection.style.transform = 'scale(1) translateY(0)';
+                    isScaled = false;
+                }
+            }
+            lastScrollY = currentScrollY;
+        };
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Optional: Clean up event listener on page unload
+        window.addEventListener('unload', () => {
+            window.removeEventListener('scroll', handleScroll);
+        });
+    });
 
     </script>
   </body>
