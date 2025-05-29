@@ -775,10 +775,6 @@ video {
   height: 100svh;
 }
 
-.h-\[400px\] {
-  height: 400px;
-}
-
 .w-1\/2 {
   width: 50%;
 }
@@ -1371,10 +1367,7 @@ video {
 }
 
 .heading_2{
-  background: linear-gradient(180deg, #B5B3AD 0%, #B5B3AD 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #B5B3AD;
   font-family: 'Clash Display', sans-serif;
   font-size: 120px;
   font-style: normal;
@@ -1384,10 +1377,7 @@ video {
 }
 
 .heading_2_mobile{
-  background: linear-gradient(180deg, #B5B3AD 0%, #B5B3AD 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #B5B3AD;
   font-family: 'Clash Display', sans-serif;
   font-size: 52px;
   font-style: normal;
@@ -1551,10 +1541,6 @@ video {
 
   .sm\:w-\[344px\] {
     width: 344px;
-  }
-
-  .sm\:w-\[352px\] {
-    width: 352px;
   }
 
   .sm\:w-\[386px\] {
@@ -1734,10 +1720,7 @@ video {
   }
 
   .md\:heading_2{
-    background: linear-gradient(180deg, #B5B3AD 0%, #B5B3AD 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #B5B3AD;
     font-family: 'Clash Display', sans-serif;
     font-size: 120px;
     font-style: normal;
