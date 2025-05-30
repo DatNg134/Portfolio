@@ -164,9 +164,11 @@
       align-items: start;
       justify-content: start;
       gap: 16px;
-      height: 80px;
-      overflow: hidden;
-      transition: height 0.4s ease, opacity 0.5s ease;
+      height: max-content;
+      width: 100%;
+      position: relative;
+      z-index:1;
+
     }
     .infor_skill_container_mobile{
       display:flex;
@@ -174,7 +176,7 @@
       align-items: start;
       justify-content: start;
       gap: 16px;
-      height: 280px;
+      height: 64px;
       overflow: hidden;
       transition: height 0.4s ease, opacity 0.5s ease;
     }
@@ -182,9 +184,6 @@
       width: 32px;
       height: 32px;
       transition: transform 0.4s ease;
-    }
-    .skill_container:hover .infor_skill_container {
-       height: 204px;
     }
     .skill_container:hover .skill-icon {
       transform: rotate(-90deg);
@@ -255,6 +254,23 @@
     .worksection{
       transition: transform 0.3s ease; /* Smooth transition for scaling and movement */
     transform-origin: center top; /* Scale from the top-center */
+    }
+
+    .skill_title_container{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      align-items: start;
+      height: 96px;
+    }
+
+    .skill_title_text{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
     }
 
 
@@ -371,57 +387,73 @@
 
 
         </div> <!-- introduce -->
-      <div id="skill" class="flex flex-col sm:flex-row gap-8 sm:h-svh px-2 sm:px-8 py-8 sm:py-0 sm:items-center w-full items-start sm:justify-between z-10 rounded-t-3xl bg-[#21201C]">
-         <div class="flex flex-col  gap-2 sm:gap-4 items-center sm:w-[40vh]">
+      <div id="skill" class="flex flex-col sm:flex-row gap-8 px-2 sm:px-8 sm:pt-[10vh] pb-[24vh] w-full items-start sm:justify-between z-10 rounded-t-3xl bg-[#21201C]" >
+         <div class="flex flex-col sm:w-[30vw] items-start sticky top-[20vh]">
           <div class=" reveal-type heading_2_mobile md:heading_2">HOW I CAN</div>
           <div class=" reveal-type heading_2_mobile md:heading_2">HELP YOU</div>
          </div>
-        <div class="flex flex-col gap-4 sm:gap-12 w-full sm:w-[60vw] justify-start items-start">
-          <div class="skill_container">
-            <div class="infor_skill_container">
-              <div class="flex flex-row gap-4 items-center">
-                <div class ="title_1_mobile sm:title_1">UI design</div>
-                <img src="./assests/icon/CaretDown.svg" class="skill-icon">               
+        <div class="flex flex-col w-full sm:w-[55vw] justify-start items-start">
+
+            <div class=" skill1 infor_skill_container bg-[#21201C] mb-[960px]">
+              <div class="skill_title_container">
+                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                <div class="skill_title_text">
+                    <div class ="title_1_mobile sm:title_1">UI design</div>
+                    <div style ="color:#B5B3AD;
+                     font-size: 48px" class ="title_1_mobile sm:title_1">(01)</div>
+                </div>          
               </div>
               <div class="body_3_mobile sm:body_3">Specialize in designing mobile and web interfaces that align seamlessly with any brand or visual style. Proficient in <span style="color:#FDFDFC; font-weight: 600;">Figma</span> , <span style="color:#FDFDFC; font-weight: 600;">Photoshop</span>, and <span style="color:#FDFDFC; font-weight: 600;">Illustrator</span>, I adapt my design approach to match diverse aesthetics and user needs.</div>
             </div>
-            <div class="w-full h-[0.5px] bg-[#62605B]"></div>
-          </div>
-          <div class="skill_container">
-            <div class="infor_skill_container">
-              <div class="flex flex-row gap-4 items-center">
-                <div class ="title_1_mobile sm:title_1">UX design</div>
-                <img src="./assests/icon/CaretDown.svg" class="skill-icon">               
+            <div class=" skill2 infor_skill_container bg-[#21201C] mb-[864px]">
+              <div class="skill_title_container">
+                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                <div class="skill_title_text">
+                    <div class ="title_1_mobile sm:title_1">UX design</div>
+                    <div style ="color:#B5B3AD; font-size: 48px" class ="title_1_mobile sm:title_1">(02)</div>
+                </div>          
               </div>
               <div class="body_3_mobile sm:body_3">I conduct user research, define problems, and deliver design solutions through clear information architecture, sitemaps, and user flows—applying both <span style="color:#FDFDFC; font-weight: 600;">user-centered design principles</span> and <span style="color:#FDFDFC; font-weight: 600;">design thinking frameworks</span>.</div>
             </div>
-            <div class="w-full h-[0.5px] bg-[#62605B]"></div>
-          </div>
-          <div class="skill_container">
-            <div class="infor_skill_container">
-              <div class="flex flex-row gap-4 items-center">
-                <div class ="title_1_mobile sm:title_1">Motion/Prototype</div>
-                <img src="./assests/icon/CaretDown.svg" class="skill-icon">               
+            <div class=" skill3 infor_skill_container bg-[#21201C] mb-[768px]">
+              <div class="skill_title_container">
+                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                <div class="skill_title_text">
+                    <div class ="title_1_mobile sm:title_1">Motion/Prototype</div>
+                    <div style ="color:#B5B3AD; font-size: 48px" class ="title_1_mobile sm:title_1">(03)</div>
+                </div>          
               </div>
-              <div class="body_3_mobile sm:body_3">Skilled in creating interactive prototypes, custom icons, flash screen animations, and product showreels to enhance user experience and product presentation. Tool use: <span style="color:#FDFDFC; font-weight: 600;">Lottiefile</span>, <span style="color:#FDFDFC; font-weight: 600;">Protopie</span> and <span style="color:#FDFDFC; font-weight: 600;">After Effects</span></div>
+              <div class="body_3_mobile sm:body_3">Skilled in creating interactive prototypes, custom icons, flash screen animations, and product showreels to enhance user experience and product presentation. Tool use: <span style="color:#FDFDFC; font-weight: 600;">Lottiefile</span>, <span style="color:#FDFDFC; font-weight: 600;">Protopie</span> and <span style="color:#FDFDFC; font-weight: 600;">After Effects</span>.</div>
             </div>
-            <div class="w-full h-[0.5px] bg-[#62605B]"></div>
-          </div>
-          <div class="skill_container">
-            <div class="infor_skill_container">
-              <div class="flex flex-row gap-4 items-center">
-                <div class ="title_1_mobile sm:title_1">Front-end development</div>
-                <img src="./assests/icon/CaretDown.svg" class="skill-icon">               
+            <div class=" skill4 infor_skill_container bg-[#21201C] mb-[300px]">
+              <div class="skill_title_container">
+                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                <div class="skill_title_text">
+                    <div class ="title_1_mobile sm:title_1">Front-end development</div>
+                    <div style ="color:#B5B3AD; font-size: 48px" class ="title_1_mobile sm:title_1">(04)</div>
+                </div>          
               </div>
               <div class="body_3_mobile sm:body_3">Familiar with <span style="color:#FDFDFC; font-weight: 600;">HTML</span>, and <span style="color:#FDFDFC; font-weight: 600;">CSS</span> allows me to bridge the gap between design and development, ensuring smoother handoffs and more practical design solutions.</div>
-            </div>
-            <div class="w-full h-[0.5px] bg-[#62605B]"></div>
-          </div>
+            </div>             
+
+
+
+          
+
+
+
+
+
+
+
+
+          
+
         </div>
        </div>
       </div> <!-- skill -->
       <section class="worksection">
-        <div id="work" class="flex flex-col px-2 sm:px-8 py-20 gap-12 justify-start bg-[#21201C] w-full rounded-b-3xl z-10">
+        <div id="work" class="flex flex-col px-2 sm:px-8 pb-[12vh] pt-[10vh] gap-12 justify-start bg-[#21201C] w-full rounded-b-3xl z-10">
           <div class="flex flex-row  gap-2 sm:gap-4 items-center">
             <div class=" reveal-type heading_2_mobile md:heading_2">SELECTED WORK</div>
           </div>
@@ -707,6 +739,74 @@
         markers: false // Set to true for debugging
       }
     });
+
+    gsap.to("#skill .sticky", {
+    scrollTrigger: {
+    trigger: "#skill",
+    start: "top", // Start sticking when top of #skill hits 10vh
+        endTrigger: "#work",
+        end: "top bottom",
+    pinSpacing: false,
+    scrub: true,
+      }
+    });
+
+    const skill1 = document.querySelector(".skill1");
+    gsap.to(skill1,{
+      scrollTrigger:{
+        trigger: skill1,
+        start: "top 180vh",
+        endTrigger: "#skill",
+        end: "bottom bottom",
+        pin:true,
+        pinSpacing: false,
+        ease: "sine.out", 
+      }
+    })
+
+    const skill2 = document.querySelector(".skill2");
+    gsap.to(skill2,{
+      scrollTrigger:{
+        trigger: skill2,
+        start: "top 276vh",
+        endTrigger: "#work",
+        end: "top bottom",
+        pin:true,
+        pinSpacing: false,
+        ease: "sine.out",
+      }
+    })
+
+    const skill3 = document.querySelector(".skill3");
+    gsap.to(skill3,{
+      scrollTrigger:{
+        trigger: skill3,
+        start: "top 372vh",
+        endTrigger: "#work",
+        end: "top bottom",
+        pin:true,
+        pinSpacing: false,
+        ease: "sine.out",
+      }
+    })
+
+    const skill4 = document.querySelector(".skill4");
+    gsap.to(skill4,{
+      scrollTrigger:{
+        trigger: skill4,
+        start: "top 468vh",
+        endTrigger: "#work",
+        end: "top bottom",
+        pin:true,
+        pinSpacing: false,
+        ease: "sine.out",
+      }
+    })
+
+
+
+
+
     </script>
   </body>
 </html>
