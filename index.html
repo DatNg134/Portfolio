@@ -133,9 +133,7 @@
     .workcard{
       display: flex;
       flex-direction: column;
-      padding-bottom: 16px;
-
-      gap: 8px;
+      gap: 4px;
       transition: scale 0.4s ease
     }
     .workcardinfo{
@@ -249,7 +247,7 @@
     }
 
     .workcard:hover {
-      scale: 1.04; /* Slightly enlarge the card on hover */
+      scale: 1.01; /* Slightly enlarge the card on hover */
     }
     .worksection{
       transition: transform 0.3s ease; /* Smooth transition for scaling and movement */
@@ -274,7 +272,6 @@
     }
 
 
-
   </style>
   <body style ="background-color: #FDFDFC">
     <div class="flex flex-col items-center w-full">
@@ -288,16 +285,16 @@
         <div class="flex flex-col sm:flex-row items-center gap-4">
 
           <a class="hover-text body_1" href="#work">
-              <span class="top">WORK</span>
-              <span class="bottom">MARVEL</span>
+              <span class="top">Work</span>
+              <span class="bottom"> Marvel</span>
           </a>
           <a class="hover-text body_1">
-            <span class="top">ABOUT ME</span>
-            <span class="bottom">MEDIOCRE</span>
+            <span class="top">About me</span>
+            <span class="bottom">Mediocre</span>
           </a>
           <a class="hover-text body_1" href="#contact">
-            <span class="top">CONTACT</span>
-            <span class="bottom">WELCOME</span>
+            <span class="top">Contact</span>
+            <span class="bottom">Welcome</span>
           </a>
         </div>  
       </div>
@@ -316,7 +313,7 @@
                 <span class="reveal-body2 body_2_mobile sm:body_2">I design mobile applications, websites that balance between delightful interface and utilized user experience.
                 </span>
                 <a href="./assests/CV/CV_UIUXdesigner_NguyenTatDat.pdf" download="CV_UIUXdesigner_NguyenTatDat.pdf" class ="cv_button">
-                  <span style="color:#FDFDFC" class="button">MY CV</span>
+                  <span style="color:#FDFDFC" class="button">My CV</span>
                   <div class="icon-cv-wrapper">
                     <img
                       src="./assests/icon/ArrowLineDown.svg"
@@ -387,14 +384,15 @@
 
 
         </div> <!-- introduce -->
-      <div id="skill" class="flex flex-col sm:flex-row gap-8 px-2 sm:px-8 sm:pt-[10vh] pb-[24vh] w-full items-start sm:justify-between z-10 rounded-t-3xl bg-[#21201C]" >
-         <div class="flex flex-col sm:w-[30vw] items-start sticky top-[20vh]">
-          <div class=" reveal-type heading_2_mobile md:heading_2">HOW I CAN</div>
-          <div class=" reveal-type heading_2_mobile md:heading_2">HELP YOU</div>
+      <div id="skill" class="flex flex-col gap-6 sm:grid grid-cols-12 px-2 sm:px-8 pt-[10vh] pb-[10vh] w-full items-start sm:justify-between z-10 rounded-t-3xl bg-[#21201C]" >
+         <div class="flex flex-col col-span-4 items-start top-[20vh]">
+            <div class=" reveal-type heading_2_mobile md:heading_2">HOW I CAN</div>
+            <div class=" reveal-type heading_2_mobile md:heading_2">HELP YOU</div>
          </div>
-        <div class="flex flex-col w-full sm:w-[55vw] justify-start items-start">
+         <div class="col-span-1"></div>
+        <div class="flex flex-col col-span-7 w-full justify-start items-start">
 
-            <div class=" skill1 infor_skill_container bg-[#21201C] mb-[960px]">
+            <div class=" skill1 infor_skill_container bg-[#21201C] mt-[5vh] sm:mt-[50vh] mb-[960px]">
               <div class="skill_title_container">
                 <div class="w-full h-[0.5px] bg-[#62605B]"></div>
                 <div class="skill_title_text">
@@ -436,28 +434,36 @@
               <div class="body_3_mobile sm:body_3">Familiar with <span style="color:#FDFDFC; font-weight: 600;">HTML</span>, and <span style="color:#FDFDFC; font-weight: 600;">CSS</span> allows me to bridge the gap between design and development, ensuring smoother handoffs and more practical design solutions.</div>
             </div>             
 
-
-
-          
-
-
-
-
-
-
-
-
-          
-
         </div>
        </div>
       </div> <!-- skill -->
       <section class="worksection">
-        <div id="work" class="flex flex-col px-2 sm:px-8 pb-[12vh] pt-[10vh] gap-12 justify-start bg-[#21201C] w-full rounded-b-3xl z-10">
+        <div id="work" class="flex flex-col px-2 sm:px-8 pb-[12vh] justify-start bg-[#21201C] w-full rounded-b-3xl z-10">
           <div class="flex flex-row  gap-2 sm:gap-4 items-center">
             <div class=" reveal-type heading_2_mobile md:heading_2">SELECTED WORK</div>
           </div>
-          <div class="grid sm:grid-cols-2 gap-8">
+          <div class="flex flex-col sm:grid sm:grid-cols-12 w-full pt-6 gap-8 sm:pt-[5vh]">
+            <div class="col-span-5">
+              <div class="sticky top-12 flex flex-col w-full gap-2">
+                <div class="body_3_mobile sm:body_3">1/   <span style="color:#FDFDFC; font-weight: 500;">Finourse</span></div>
+                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                <div class="body_3_mobile sm:body_3">2/ <span style="color:#FDFDFC; font-weight: 500;">Saigonzoo</span></div>
+                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                <div class="body_3_mobile sm:body_3">3/ <span style="color:#FDFDFC; font-weight: 500;">Acmotive</span></div>
+                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                <div class="body_3_mobile sm:body_3">4/ <span style="color:#FDFDFC; font-weight: 500;">Hulib</span></div>
+                <div class="w-full h-[0.5px] bg-[#62605B]"></div>                
+                <div class="flex flex-row items-center">                  
+                  <img src="./assests/icon/ArrowElbowDownRight.svg">
+                  <a class="border-b hover-text-social button" href="Work.html">
+                    <span style="color:#FDFDFC" class="top">My Gallery</span>
+                    <span style="color:#FDFDFC" class="bottom">My Gallery</span>
+                  </a>
+                </div>
+              </div>              
+            </div>
+
+           <div class="relative grid sm:grid-cols-1 gap-16 col-span-7">
             <a class="workcard" href="https://www.behance.net/gallery/219015799/FINOURSE-Educational-app" target="_blank">
               <div style="width: full; aspect-ratio: 16/9;">
                 <img src="./assests/image/Thumbnail.png" alt="" class="size-full object-cover"/>
@@ -516,21 +522,30 @@
                 DETAIL
               </div>
             </a>
-            <div class="flex justify-center items-center">
-              <a class="round_button" href="Work.html">
-                <div class="button">GALLERY</div>
-                <div class="icon-social-wrapper">
-                  <img
-                    src="./assests/icon/ArrowUpRight.svg"
-                    alt="" class="arrow-icon" />
-                  <img
-                    src="./assests/icon/ArrowUpRight.svg"
-                    alt="" class="arrow-icon-clone" />
-                </div> 
-              </a>
-            </div>
+            <a class="workcard" href="hulibhttps://hulib.org" target="_blank">
+              <div style="width: full; aspect-ratio: 16/9;">
+                <img src="./assests/image/hulib_thumbnail.png" alt="" class="size-full object-cover"/>
+              </div>
+              <div class="workcardinfo">
+                <div class="flex justify-between self-stretch items-end">
+                  <div style="color:#FDFDFC" class="title_2_mobile sm:title_2">HULIB</div>
+
+                  <div class="tag">MENTAL HEALTH</div>
+                </div>
+                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                <div class="flex justify-between self-stretch">
+                  <div style="color:#B5B3AD" class="body_1">WEB APP</div>
+                  <div style="color:#B5B3AD" class="body_1">2024-2025</div>
+                </div>
+              </div>
+              <div class="detail_button bg-[#FDFDFC] rounded-full flex justify-center items-center text-[#21201C] text-[12px] font-medium ">
+                DETAIL
+              </div>
+            </a>
           </div>
-        </div> <!-- work -->       
+        </div>
+
+      </div> <!-- work -->       
       </section>
 
       
@@ -740,16 +755,6 @@
       }
     });
 
-    gsap.to("#skill .sticky", {
-    scrollTrigger: {
-    trigger: "#skill",
-    start: "top", // Start sticking when top of #skill hits 10vh
-        endTrigger: "#work",
-        end: "top bottom",
-    pinSpacing: false,
-    scrub: true,
-      }
-    });
 
     const skill1 = document.querySelector(".skill1");
     gsap.to(skill1,{
@@ -802,11 +807,6 @@
         ease: "sine.out",
       }
     })
-
-
-
-
-
     </script>
   </body>
 </html>
