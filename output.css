@@ -839,12 +839,12 @@ video {
   height: 36px;
 }
 
-.h-\[48px\] {
-  height: 48px;
-}
-
 .h-\[500px\] {
   height: 500px;
+}
+
+.h-\[56px\] {
+  height: 56px;
 }
 
 .h-\[64px\] {
@@ -873,10 +873,6 @@ video {
 
 .h-svh {
   height: 100svh;
-}
-
-.h-\[56px\] {
-  height: 56px;
 }
 
 .w-1\/2 {
@@ -911,12 +907,12 @@ video {
   width: 300px;
 }
 
-.w-\[48px\] {
-  width: 48px;
-}
-
 .w-\[4px\] {
   width: 4px;
+}
+
+.w-\[56px\] {
+  width: 56px;
 }
 
 .w-\[76px\] {
@@ -933,10 +929,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[56px\] {
-  width: 56px;
 }
 
 .flex-1 {
@@ -1704,17 +1696,17 @@ video {
 @font-face {
   font-family: 'BHN Victor Serif';
 
-  src: url('/assests/fonts/BHN Victor Serif Italic.otf') format('otf');
+  src: url('/assests/fonts/BHN Victor Serif Italic.otf') format('opentype');
 
-  font-weight: 600;
+  font-weight: 400;
 
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
   font-family: 'Monument Grotesk';
 
-  src: url('/assests/fonts/MonumentGrotesk-Regular.otf') format('otf');
+  src: url('/assests/fonts/MonumentGrotesk-Regular.otf') format('opentype');
 
   font-weight: 400;
 
