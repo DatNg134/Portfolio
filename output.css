@@ -1696,7 +1696,7 @@ video {
 @font-face {
   font-family: 'BHN Victor Serif';
 
-  src: url('/assests/fonts/BHN Victor Serif Italic.woff2') format('woff2');
+  src: url('/assests/fonts/BHN Victor Serif Italic.otf') format('opentype');
 
   font-weight: 400;
 
