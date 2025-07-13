@@ -1592,7 +1592,7 @@ video {
   font-family: 'BHN Victor Serif', serif;
   font-size: 76px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 100%;
   /* 64px */
 }
@@ -1602,7 +1602,7 @@ video {
   font-family: 'BHN Victor Serif', serif;
   font-size: 32px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 100%;
   /* 64px */
 }
@@ -2054,7 +2054,7 @@ video {
     font-family: 'BHN Victor Serif', serif;
     font-size: 76px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 100%;
     /* 64px */
   }
