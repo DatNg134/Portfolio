@@ -190,6 +190,7 @@
       flex-direction: column;
       align-items: start;
       justify-content: start;
+      width: 100%;
       gap: 16px;
       height: 64px;
       overflow: hidden;
@@ -288,6 +289,18 @@
       height: 80px;
     }
 
+    @media screen and (max-width: 640px) {
+    .list_work{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: start;
+      gap: 8px;
+      height: 32px;
+    }
+    }
+
+    @media screen and (min-width: 641px) {
     .list_work{
       display: flex;
       flex-direction: row;
@@ -296,6 +309,8 @@
       gap: 8px;
       height: 80px;
     }
+    }
+
 
 
   </style>
@@ -335,7 +350,7 @@
               <span class="nickname">(Diaz)</span>
             </div>
             <div class="col-span-1 sm:col-span-6 flex justify-end">
-              <img src="./assests/icon/blink.svg" alt="" class="w-[48px] h-[48px] sm:w-[76px] sm:h-[76px]" />
+              <img src="./assests/icon/blink.svg" alt="" class="w-[56px] h-[56px] sm:w-[76px] sm:h-[76px]" />
             </div>
           </div>
           <div class="w-full grid grid-cols-5 sm:grid-cols-12 gap-4 sm:gap-8">
@@ -636,7 +651,7 @@
 
       
 
-      <div id="contact" class="flex flex-col w-full bg-[#FDFDFC] p-4 sm:p-8  gap-4 sm:gap-8 items-center z-40">
+      <div id="contact" class="flex flex-col w-full bg-[#FDFDFC] p-4 sm:p-8  gap-4 sm:gap-8 items-center z-40 mt-[20svh]">
         <div class="flex flex-row justify-between w-full">
             <img src="./assests/icon/blink.svg" alt="" class="w-[76px] h-[76px]" />
             <img src="./assests/icon/blink.svg" alt="" class="w-[76px] h-[76px]" />
