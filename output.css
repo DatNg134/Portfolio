@@ -1524,7 +1524,7 @@ video {
 
 .heading_2_mobile{
   color: #21201C;
-  font-family: 'BHN Victor Serif';
+  font-family: 'BHN Victor Serif', serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
@@ -1534,7 +1534,7 @@ video {
 
 .title_1_number_mobile{
   color: #B5B3AD;
-  font-family: 'Monument Grotesk';
+  font-family: 'Monument Grotesk', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -1545,7 +1545,7 @@ video {
 
 .work_number_mobile{
   color: #B5B3AD;
-  font-family: 'BHN Victor Serif';
+  font-family: 'BHN Victor Serif', serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -1556,7 +1556,7 @@ video {
 
 .work_name_mobile{
   color: #21201C;
-  font-family: 'Monument Grotesk';
+  font-family: 'Monument Grotesk', sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -1568,7 +1568,7 @@ video {
 .title_1{
   color: #21201C;
   text-align: right;
-  font-family: 'BHN Victor Serif';
+  font-family: 'BHN Victor Serif', serif;
   font-size: 68px;
   font-style: normal;
   font-weight: 400;
@@ -1579,7 +1579,7 @@ video {
 .title_1_mobile{
   color: #21201C;
   text-align: right;
-  font-family: 'BHN Victor Serif';
+  font-family: 'BHN Victor Serif', serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -1589,7 +1589,7 @@ video {
 
 .title_2{
   color: #21201C;
-  font-family: 'BHN Victor Serif';
+  font-family: 'BHN Victor Serif', serif;
   font-size: 76px;
   font-style: normal;
   font-weight: 500;
@@ -1599,7 +1599,7 @@ video {
 
 .title_2_mobile{
   color: #21201C;
-  font-family: 'BHN Victor Serif';
+  font-family: 'BHN Victor Serif', serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
@@ -1625,7 +1625,7 @@ video {
 
 .contact{
   color: #21201C;
-  font-family: 'Monument Grotesk';
+  font-family: 'Monument Grotesk', sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -1635,7 +1635,7 @@ video {
 
 .nickname{
   color: #21201C;
-  font-family: 'Monument Grotesk';
+  font-family: 'Monument Grotesk', sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -1646,7 +1646,7 @@ video {
 
 .nickname_mobile{
   color: #21201C;
-  font-family: 'Monument Grotesk';
+  font-family: 'Monument Grotesk', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -2007,7 +2007,7 @@ video {
 
   .sm\:title_1_number{
     color: #B5B3AD;
-    font-family: 'Monument Grotesk';
+    font-family: 'Monument Grotesk', sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -2018,7 +2018,7 @@ video {
 
   .sm\:work_number{
     color: #B5B3AD;
-    font-family: 'BHN Victor Serif';
+    font-family: 'BHN Victor Serif', serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -2029,7 +2029,7 @@ video {
 
   .sm\:work_name{
     color: #21201C;
-    font-family: 'Monument Grotesk';
+    font-family: 'Monument Grotesk', sans-serif;
     font-size: 68px;
     font-style: normal;
     font-weight: 400;
@@ -2041,7 +2041,7 @@ video {
   .sm\:title_1{
     color: #21201C;
     text-align: right;
-    font-family: 'BHN Victor Serif';
+    font-family: 'BHN Victor Serif', serif;
     font-size: 68px;
     font-style: normal;
     font-weight: 400;
@@ -2051,7 +2051,7 @@ video {
 
   .sm\:title_2{
     color: #21201C;
-    font-family: 'BHN Victor Serif';
+    font-family: 'BHN Victor Serif', serif;
     font-size: 76px;
     font-style: normal;
     font-weight: 500;
@@ -2077,7 +2077,7 @@ video {
 
   .sm\:nickname{
     color: #21201C;
-    font-family: 'Monument Grotesk';
+    font-family: 'Monument Grotesk', sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -2104,7 +2104,7 @@ video {
 
   .md\:heading_2{
     color: #21201C;
-    font-family: 'BHN Victor Serif';
+    font-family: 'BHN Victor Serif', serif;
     font-size: 120px;
     font-style: normal;
     font-weight: 400;
