@@ -608,6 +608,10 @@ video {
   left: 0px;
 }
 
+.left-\[240px\] {
+  left: 240px;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -624,8 +628,16 @@ video {
   top: 3rem;
 }
 
+.top-20 {
+  top: 5rem;
+}
+
 .top-\[20vh\] {
   top: 20vh;
+}
+
+.top-\[40svh\] {
+  top: 40svh;
 }
 
 .z-0 {
@@ -634,6 +646,10 @@ video {
 
 .z-10 {
   z-index: 10;
+}
+
+.z-40 {
+  z-index: 40;
 }
 
 .order-1 {
@@ -654,6 +670,10 @@ video {
 
 .col-span-2 {
   grid-column: span 2 / span 2;
+}
+
+.col-span-3 {
+  grid-column: span 3 / span 3;
 }
 
 .col-span-4 {
@@ -695,6 +715,18 @@ video {
 
 .mb-\[300px\] {
   margin-bottom: 300px;
+}
+
+.mb-\[40svh\] {
+  margin-bottom: 40svh;
+}
+
+.mb-\[45svh\] {
+  margin-bottom: 45svh;
+}
+
+.mb-\[50svh\] {
+  margin-bottom: 50svh;
 }
 
 .mb-\[768px\] {
@@ -783,20 +815,40 @@ video {
   height: 1rem;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
 .h-\[0\.5px\] {
   height: 0.5px;
+}
+
+.h-\[24px\] {
+  height: 24px;
 }
 
 .h-\[360px\] {
   height: 360px;
 }
 
+.h-\[36px\] {
+  height: 36px;
+}
+
 .h-\[500px\] {
   height: 500px;
 }
 
+.h-\[56px\] {
+  height: 56px;
+}
+
 .h-\[64px\] {
   height: 64px;
+}
+
+.h-\[76px\] {
+  height: 76px;
 }
 
 .h-\[80px\] {
@@ -835,8 +887,16 @@ video {
   width: 160px;
 }
 
+.w-\[220px\] {
+  width: 220px;
+}
+
 .w-\[240px\] {
   width: 240px;
+}
+
+.w-\[24px\] {
+  width: 24px;
 }
 
 .w-\[300px\] {
@@ -845,6 +905,14 @@ video {
 
 .w-\[4px\] {
   width: 4px;
+}
+
+.w-\[56px\] {
+  width: 56px;
+}
+
+.w-\[76px\] {
+  width: 76px;
 }
 
 .w-\[984px\] {
@@ -931,6 +999,10 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -1015,6 +1087,10 @@ video {
   gap: 2rem;
 }
 
+.gap-\[24px\] {
+  gap: 24px;
+}
+
 .gap-\[52px\] {
   gap: 52px;
 }
@@ -1071,8 +1147,22 @@ video {
   border-width: 1px;
 }
 
+.border-\[0\.5px\] {
+  border-width: 0.5px;
+}
+
+.border-y-\[0\.5px\] {
+  border-top-width: 0.5px;
+  border-bottom-width: 0.5px;
+}
+
 .border-b {
   border-bottom-width: 1px;
+}
+
+.border-\[\#62605B\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(98 96 91 / var(--tw-border-opacity, 1));
 }
 
 .bg-\[\#21201C\] {
@@ -1088,6 +1178,11 @@ video {
 .bg-\[\#636363\] {
   --tw-bg-opacity: 1;
   background-color: rgb(99 99 99 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#EBFF00\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 255 0 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#FDFDFC\] {
@@ -1204,6 +1299,10 @@ video {
   padding-bottom: 5rem;
 }
 
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
 .pb-\[10vh\] {
   padding-bottom: 10vh;
 }
@@ -1222,6 +1321,10 @@ video {
 
 .pt-2 {
   padding-top: 0.5rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .pt-6 {
@@ -1278,6 +1381,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#EBFF00\] {
+  --tw-text-opacity: 1;
+  color: rgb(235 255 0 / var(--tw-text-opacity, 1));
 }
 
 .transition {
@@ -1352,43 +1460,40 @@ video {
 
 .body_1 {
   color: #21201C;
-  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Space Mono", monospace;
   font-size: 16px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 100%;
-  letter-spacing: -1px;
 }
 
 .body_2 {
-  color: #63635E;
-  width: 600px;
-  text-align: center;
-  font-family: "Be Vietnam Pro", sans-serif;
-  font-size: 28px;
+  color: #21201C;
+  width: 512px;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 130%;
   /* 36.4px */
 }
 
 .body_2_mobile {
-  color: #63635E;
-  width: 400px;
-  text-align: center;
-  font-family: "Be Vietnam Pro", sans-serif;
-  font-size: 28px;
+  color: #21201C;
+  width: 100%;
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 130%;
   /* 36.4px */
 }
 
 .body_3 {
-  color: #B5B3AD;
-  width: 640px;
+  color: #21201C;
+  width: 724px;
   text-align: left;
-  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Space Mono", monospace;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -1397,10 +1502,10 @@ video {
 }
 
 .body_3_mobile {
-  color: #B5B3AD;
+  color: #21201C;
   width: 400px;
   text-align: left;
-  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Space Mono", monospace;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1410,52 +1515,83 @@ video {
 
 .button{
   color: #21201C;
-  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Space Mono", monospace;
   font-size: 24px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 100%;
   /* 24px */
 }
 
 .heading_2_mobile{
-  color: #B5B3AD;
-  font-family: 'Clash Display', sans-serif;
-  font-size: 52px;
+  color: #21201C;
+  font-family: 'BHN Victor Serif';
+  font-size: 32px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 100%;
   /* 213px */
 }
 
+.title_1_number_mobile{
+  color: #B5B3AD;
+  font-family: 'Monument Grotesk';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  /* 213px */
+  letter-spacing: -5%;
+}
+
+.work_number_mobile{
+  color: #B5B3AD;
+  font-family: 'BHN Victor Serif';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  /* 213px */
+  letter-spacing: -5%;
+}
+
+.work_name_mobile{
+  color: #21201C;
+  font-family: 'Monument Grotesk';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  /* 213px */
+  letter-spacing: 0%;
+}
+
 .title_1{
-  color: #FDFDFC;
+  color: #21201C;
   text-align: right;
-  font-family: "Be Vietnam Pro", sans-serif;
-  font-size: 56px;
+  font-family: 'BHN Victor Serif';
+  font-size: 68px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
   /* 68px */
-  letter-spacing: -3.4px;
 }
 
 .title_1_mobile{
-  color: #FDFDFC;
+  color: #21201C;
   text-align: right;
-  font-family: "Be Vietnam Pro", sans-serif;
-  font-size: 40px;
+  font-family: 'BHN Victor Serif';
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
   /* 68px */
-  letter-spacing: -3.4px;
 }
 
 .title_2{
-  color: #FDFDFC;
-  font-family: 'Clash Display', sans-serif;
-  font-size: 64px;
+  color: #21201C;
+  font-family: 'BHN Victor Serif';
+  font-size: 76px;
   font-style: normal;
   font-weight: 500;
   line-height: 100%;
@@ -1463,8 +1599,8 @@ video {
 }
 
 .title_2_mobile{
-  color: #FDFDFC;
-  font-family: 'Clash Display', sans-serif;
+  color: #21201C;
+  font-family: 'BHN Victor Serif';
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
@@ -1473,24 +1609,51 @@ video {
 }
 
 .heading_4_mobile{
-  text-align: center;
-  font-family: 'Clash Display', sans-serif ;
-  font-size: 52px;
-  font-weight: 600;
+  font-family: "Space Mono", monospace ;
+  font-size: 40px;
+  font-weight: 400;
   line-height: 100%;
   color: #21201C;
-  width: 640px;
+}
+
+.heading_5_mobile{
+  font-family: "Space Mono", monospace ;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 100%;
+  color: #EBFF00;
 }
 
 .contact{
   color: #21201C;
-  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: 'Monument Grotesk';
   font-size: 24px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 100%;
   /* 64px */
-  letter-spacing: -1px;
+}
+
+.nickname{
+  color: #21201C;
+  font-family: 'Monument Grotesk';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  /* 213px */
+  letter-spacing: 0%;
+}
+
+.nickname_mobile{
+  color: #21201C;
+  font-family: 'Monument Grotesk';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  /* 213px */
+  letter-spacing: 0%;
 }
 
 @keyframes open{
@@ -1531,7 +1694,35 @@ video {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'BHN Victor Serif';
+
+  src: url('/assests/fonts/BHN Victor Serif Italic.otf') format('otf');
+
+  font-weight: 600;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Monument Grotesk';
+
+  src: url('/assests/fonts/MonumentGrotesk-Regular.otf') format('otf');
+
+  font-weight: 400;
+
+  font-style: normal;
+}
+
 @media (min-width: 640px) {
+  .sm\:left-\[43vw\] {
+    left: 43vw;
+  }
+
+  .sm\:z-0 {
+    z-index: 0;
+  }
+
   .sm\:order-1 {
     order: 1;
   }
@@ -1552,6 +1743,22 @@ video {
     grid-column: span 4 / span 4;
   }
 
+  .sm\:col-span-5 {
+    grid-column: span 5 / span 5;
+  }
+
+  .sm\:col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+
+  .sm\:col-span-7 {
+    grid-column: span 7 / span 7;
+  }
+
+  .sm\:col-span-8 {
+    grid-column: span 8 / span 8;
+  }
+
   .sm\:mt-\[50vh\] {
     margin-top: 50vh;
   }
@@ -1568,8 +1775,24 @@ video {
     display: none;
   }
 
+  .sm\:h-12 {
+    height: 3rem;
+  }
+
+  .sm\:h-\[144px\] {
+    height: 144px;
+  }
+
+  .sm\:h-\[42px\] {
+    height: 42px;
+  }
+
   .sm\:h-\[50vh\] {
     height: 50vh;
+  }
+
+  .sm\:h-\[76px\] {
+    height: 76px;
   }
 
   .sm\:h-full {
@@ -1578,6 +1801,10 @@ video {
 
   .sm\:h-svh {
     height: 100svh;
+  }
+
+  .sm\:w-12 {
+    width: 3rem;
   }
 
   .sm\:w-\[30vw\] {
@@ -1596,12 +1823,20 @@ video {
     width: 40vh;
   }
 
+  .sm\:w-\[42px\] {
+    width: 42px;
+  }
+
   .sm\:w-\[55vw\] {
     width: 55vw;
   }
 
   .sm\:w-\[60vw\] {
     width: 60vw;
+  }
+
+  .sm\:w-\[76px\] {
+    width: 76px;
   }
 
   .sm\:grid-cols-1 {
@@ -1618,6 +1853,10 @@ video {
 
   .sm\:grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .sm\:flex-row {
@@ -1660,12 +1899,36 @@ video {
     gap: 1rem;
   }
 
+  .sm\:gap-5 {
+    gap: 1.25rem;
+  }
+
+  .sm\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .sm\:gap-8 {
+    gap: 2rem;
+  }
+
+  .sm\:gap-\[20svh\] {
+    gap: 20svh;
+  }
+
+  .sm\:gap-\[32px\] {
+    gap: 32px;
+  }
+
   .sm\:gap-\[360px\] {
     gap: 360px;
   }
 
   .sm\:gap-\[48px\] {
     gap: 48px;
+  }
+
+  .sm\:gap-\[64px\] {
+    gap: 64px;
   }
 
   .sm\:p-4 {
@@ -1696,8 +1959,20 @@ video {
     padding-bottom: 7rem;
   }
 
+  .sm\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
   .sm\:pb-28 {
     padding-bottom: 7rem;
+  }
+
+  .sm\:pl-\[72px\] {
+    padding-left: 72px;
+  }
+
+  .sm\:pt-6 {
+    padding-top: 1.5rem;
   }
 
   .sm\:pt-\[10vh\] {
@@ -1709,22 +1984,21 @@ video {
   }
 
   .sm\:body_2 {
-    color: #63635E;
-    width: 600px;
-    text-align: center;
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 28px;
+    color: #21201C;
+    width: 512px;
+    font-family: "Space Mono", monospace;
+    font-size: 24px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 130%;
     /* 36.4px */
   }
 
   .sm\:body_3 {
-    color: #B5B3AD;
-    width: 640px;
+    color: #21201C;
+    width: 724px;
     text-align: left;
-    font-family: "Be Vietnam Pro", sans-serif;
+    font-family: "Space Mono", monospace;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -1732,22 +2006,54 @@ video {
     /* 36.4px */
   }
 
+  .sm\:title_1_number{
+    color: #B5B3AD;
+    font-family: 'Monument Grotesk';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 213px */
+    letter-spacing: -5%;
+  }
+
+  .sm\:work_number{
+    color: #B5B3AD;
+    font-family: 'BHN Victor Serif';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 213px */
+    letter-spacing: -5%;
+  }
+
+  .sm\:work_name{
+    color: #21201C;
+    font-family: 'Monument Grotesk';
+    font-size: 68px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 80px;
+    /* 213px */
+    letter-spacing: 0%;
+  }
+
   .sm\:title_1{
-    color: #FDFDFC;
+    color: #21201C;
     text-align: right;
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-size: 56px;
+    font-family: 'BHN Victor Serif';
+    font-size: 68px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
     /* 68px */
-    letter-spacing: -3.4px;
   }
 
   .sm\:title_2{
-    color: #FDFDFC;
-    font-family: 'Clash Display', sans-serif;
-    font-size: 64px;
+    color: #21201C;
+    font-family: 'BHN Victor Serif';
+    font-size: 76px;
     font-style: normal;
     font-weight: 500;
     line-height: 100%;
@@ -1755,13 +2061,30 @@ video {
   }
 
   .sm\:heading_4{
-    text-align: center;
-    font-family: 'Clash Display', sans-serif ;
-    font-size: 116px;
-    font-weight: 600;
+    font-family: "Space Mono", monospace ;
+    font-size: 120px;
+    font-weight: 400;
     line-height: 100%;
     color: #21201C;
-    width: 1200px;
+  }
+
+  .sm\:heading_5{
+    font-family: "Space Mono", monospace ;
+    font-size: 180px;
+    font-weight: 600;
+    line-height: 100%;
+    color: #EBFF00;
+  }
+
+  .sm\:nickname{
+    color: #21201C;
+    font-family: 'Monument Grotesk';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 213px */
+    letter-spacing: 0%;
   }
 
   @media (min-width: 768px) {
@@ -1781,11 +2104,11 @@ video {
   }
 
   .md\:heading_2{
-    color: #B5B3AD;
-    font-family: 'Clash Display', sans-serif;
+    color: #21201C;
+    font-family: 'BHN Victor Serif';
     font-size: 120px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 100%;
     /* 213px */
   }

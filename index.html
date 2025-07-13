@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dat Nguyen</title>
+    <title>Dat Nguyen (Diaz) - UI/UX/Product Designer</title>
 
     <link rel="icon" type="image/x-icon" href="./assests/icon/danglogo.svg" />
     <link rel="stylesheet" href="output.css" />
@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -35,13 +36,21 @@
     }
 
     .cv_button{
-      background: #21201C;
       display: flex;
-      width: 218px;
-      padding: 8px 8px 8px 24px;
+      width: 221px;
+      padding: 8px 8px 8px 16px;
       justify-content: space-between;
       align-items: center;
-      border-radius: 50px;
+      position: relative;
+    }
+
+    .gallery_button{
+      display: flex;
+      width: 221px;
+      padding: 8px 8px 8px 16px;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
     }
 
     .social_button{
@@ -49,8 +58,7 @@
       flex-direction: row;   
       height: 64px; 
       width: 124px; 
-      gap: 16px; 
-      border: 2px solid #21201C; 
+      gap: 8px;
       padding: 16px 24px  
     }
     .icon-cv-wrapper {
@@ -60,8 +68,7 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              background-color: #FDFDFC;
-              border-radius: 100px;
+              background-color: #21201C;
               overflow: hidden;
     }
     
@@ -130,6 +137,15 @@
             transform: translateY(0);
     }
 
+    .gallery_button:hover .arrow-icon {
+            transform: translate(100%, -100%);
+            
+    }
+    .gallery_button:hover .arrow-icon-clone {
+            transform: translateY(0);
+            transform: translateX(0);
+    }
+
     .workcard{
       display: flex;
       flex-direction: column;
@@ -164,6 +180,7 @@
       gap: 16px;
       height: max-content;
       width: 100%;
+      padding-bottom: 24px;
       position: relative;
       z-index:1;
 
@@ -192,13 +209,10 @@
       align-items: center;
       justify-content: center;
       border-radius: 100px;
-      background-color: #B5B3AD;
-      padding: 8px 16px;
-      font-family: "Be Vietnam Pro", sans-serif;
-      font-size: 16px;
-      font-weight: 600;
+      font-family: 'Monument Grotesk';
+      font-size: 20px;
+      font-weight: 400;
       line-height: 100%;
-      letter-spacing: -1px;
       text-transform: uppercase;
       color: #21201C;
     }
@@ -231,6 +245,7 @@
       pointer-events: none; /* Prevent button from blocking card click */
       width: 64px;
       height: 64px;
+      font-family: "Space Mono", monospace; 
     }
 
     .round_button:hover .arrow-icon-clone {
@@ -261,71 +276,99 @@
       gap: 16px;
       width: 100%;
       align-items: start;
-      height: 96px;
+      height: 98px;
     }
 
     .skill_title_text{
       display: flex;
       flex-direction: row;
       width: 100%;
-      align-items: center;
+      align-items: start;
       justify-content: space-between;
+      height: 80px;
+    }
+
+    .list_work{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: start;
+      gap: 8px;
+      height: 80px;
     }
 
 
   </style>
   <body style ="background-color: #FDFDFC">
     <div class="flex flex-col items-center w-full">
-      <div id="top" class="flex flex-row p-2 sm:p-8 w-full justify-between items-start sm:items-center">
-        <div class="flex justify-center items-center gap-4 sm:gap-16">
+      <div id="top" class="flex flex-row p-4 sm:p-8 w-full justify-between items-start sm:items-center fixed z-40">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-16">
           <div class="header_logo">
             <img src="./assests/icon/danglogo.svg" alt="" class="w-5"/>
           </div>
-          <div class="body_1">[UI/UX DESIGNER]</div>
+          <div class="body_1">[UI/UX/PRODUCT DESIGNER]</div>
         </div>
-        <div class="flex flex-col sm:flex-row items-center gap-4">
+        <div class="flex flex-col sm:flex-row items-center justify-end gap-4">
 
           <a class="hover-text body_1" href="#work">
-              <span class="top">Work</span>
-              <span class="bottom"> Marvel</span>
+              <span class="top">WORK</span>
+              <span class="bottom"> MARVEL</span>
           </a>
           <a class="hover-text body_1">
-            <span class="top">About me</span>
-            <span class="bottom">Mediocre</span>
+            <span class="top">ABOUT ME</span>
+            <span class="bottom">MEDIOCRE</span>
           </a>
           <a class="hover-text body_1" href="#contact">
-            <span class="top">Contact</span>
-            <span class="bottom">Welcome</span>
+            <span class="top">CONTACT</span>
+            <span class="bottom">WELCOME</span>
           </a>
         </div>  
-      </div>
-
-        <div class="introdection h-svh w-full flex flex-col px-2 sm:px-8 pb-20 sm:pb-28 items-center justify-end gap-6 sm:gap-12 sticky top-0 z-0">
-            <div class="w-full overflow-hidden">
-              <img src="./assests/icon/DATNGUYEN.svg" alt="" class="w-full object-cover animate-transform" />
+      </div> <!-- nav bar -->
+      <img src="./assests/3d/3dtriangle.png" alt="" class="fixed w-[220px] top-[40svh] left-[240px] sm:left-[43vw] z-0"/> <!-- 3d image -->
+      <div class="flex flex-col p-4 sm:p-8 w-full h-svh justify-end pb-8 sm:pb-10 gap-6 sm:gap-[20svh] z-10">
+        <div class="flex flex-col w-full">
+          <div class="w-full grid grid-cols-5 sm:grid-cols-12 gap-4 sm:gap-8">
+            <div class="col-span-3 sm:col-span-4 overflow-hidden">
+              <img src="./assests/icon/DAT.svg" alt="" class="w-full object-cover animate-transform" />
             </div>
-            
-            <div class=" flex flex-col sm:flex-row justify-between sm:items-end gap-2 w-full h-[80vh] sm:h-[50vh] items-center sm:justify-between animate-fadeIn origin-center">
-                <div class="aspect-2/3 w-auto h-[360px] sm:h-full order-2 sm:order-1 overflow-hidden animate-scale origin-tops">
-                  <img src="./assests/image/anhcanhan1.jpg" alt="" class="w-full h-full object-cover"/>
-                </div>
-
-              <div class="flex flex-col sm:h-full items-center gap-2 sm:justify-between  order-1 sm:order-2 overflow-hidden animate-transform">
-                <span class="reveal-body2 body_2_mobile sm:body_2">I design mobile applications, websites that balance between delightful interface and utilized user experience.
-                </span>
-                <a href="./assests/CV/CV_UIUXdesigner_NguyenTatDat.pdf" download="CV_UIUXdesigner_NguyenTatDat.pdf" class ="cv_button">
-                  <span style="color:#FDFDFC" class="button">My CV</span>
-                  <div class="icon-cv-wrapper">
-                    <img
-                      src="./assests/icon/ArrowLineDown.svg"
-                      alt="Download icon" class="download-icon" />
-                    <img
-                      src="./assests/icon/ArrowLineDown.svg"
-                      alt="Download icon" class="download-icon-clone" />
-                  </div>
-                </a>
+            <div class="col-span-1 sm:col-span-2">
+              <span class="nickname">(Diaz)</span>
+            </div>
+            <div class="col-span-2 sm:col-span-6 flex justify-end">
+              <img src="./assests/icon/blink.svg" alt="" class="w-[56px] h-[56px] sm:w-[76px] sm:h-[76px]" />
+            </div>
+          </div>
+          <div class="w-full grid grid-cols-5 sm:grid-cols-12 gap-4 sm:gap-8">
+            <div class="col-span-5 sm:col-span-4 pt-5 sm:pt-6">
+              <div class="reveal-body2 body_2_mobile sm:body_2">
+                <span>designing to solve problems that matter — not just visually, but in ways that truly serve the users.</span>
               </div>
-              <div class="flex flex-row sm:flex-col gap-4 w-full sm:w-[344px] justify-center sm:items-end order-3 overflow-hidden animate-transform">
+            </div>
+            <div class="col-span-5 sm:col-span-8 z-1 sm:z-0">
+              <div class="flex flex-col items-end gap-2 sm:gap-6 w-full overflow-hidden">
+                <img src="./assests/icon/NGUYEN.svg" alt="" class="w-full object-cover animate-transform" />
+                <span style="text-align: right;" class="nickname_mobile sm:nickname">Ho Chi Minh City, Viet Nam</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full grid grid-cols-5 sm:grid-cols-12 gap-4 sm:gap-8">
+          <img class="sm:col-span-5" src="./assests/icon/SCROLL DOWN.svg" alt="" />
+          <div class="col-span-5 sm:col-span-4 flex items-end">
+            <a href="./assests/CV/CV_UIUXdesigner_NguyenTatDat.pdf" download="CV_UIUXdesigner_NguyenTatDat.pdf" class ="cv_button">
+                    <span style="color:#21201C;z-index:1" class="button">MY RESUME</span>
+                    <img style="position:absolute; left:0px; width:221px; height:64px" src="./assests/icon/button_bg.svg"/>
+                    <div class="icon-cv-wrapper">
+                      <img
+                        src="./assests/icon/arrow_down_pixel.svg"
+                        alt="Download icon" class="download-icon" />
+                      <img
+                        src="./assests/icon/arrow_down_pixel.svg"
+                        alt="Download icon" class="download-icon-clone" />
+                    </div>
+            </a>
+          </div>
+          <div class="flex flex-row gap-4 w-full justify-end sm:items-end order-3 col-span-5 sm:col-span-3">
                 <a class="social_button" href="https://www.behance.net/tttnguyn1" target="_blank">
                   <div class="icon-social-wrapper">  
                     <img
@@ -337,10 +380,10 @@
                   </div>  
                   <div class="icon-social-wrapper">
                     <img
-                      src="./assests/icon/ArrowUpRight.svg"
+                      src="./assests/icon/arrow_upright_pixel.svg"
                       alt="" class="arrow-icon" />
                     <img
-                      src="./assests/icon/ArrowUpRight.svg"
+                      src="./assests/icon/arrow_upright_pixel.svg"
                       alt="" class="arrow-icon-clone" />
                   </div>
                 </a>
@@ -355,10 +398,10 @@
                   </div>  
                   <div class="icon-social-wrapper">
                     <img
-                      src="./assests/icon/ArrowUpRight.svg"
+                      src="./assests/icon/arrow_upright_pixel.svg"
                       alt="" class="arrow-icon" />
                     <img
-                      src="./assests/icon/ArrowUpRight.svg"
+                      src="./assests/icon/arrow_upright_pixel.svg"
                       alt="" class="arrow-icon-clone" />
                   </div>
                 </a>
@@ -373,114 +416,176 @@
                   </div>  
                   <div class="icon-social-wrapper">
                     <img
-                      src="./assests/icon/ArrowUpRight.svg"
+                      src="./assests/icon/arrow_upright_pixel.svg"
                       alt="" class="arrow-icon" />
                     <img
-                      src="./assests/icon/ArrowUpRight.svg"
+                      src="./assests/icon/arrow_upright_pixel.svg"
                       alt="" class="arrow-icon-clone" />
                   </div>
                 </a>
             </div>
           </div>
-
-
-        </div> <!-- introduce -->
-      <div id="skill" class="flex flex-col gap-6 sm:grid grid-cols-12 px-2 sm:px-8 pt-[10vh] pb-[10vh] w-full items-start sm:justify-between z-10 rounded-t-3xl bg-[#21201C]" >
-         <div class="flex flex-col col-span-4 items-start top-[20vh]">
-            <div class=" reveal-type heading_2_mobile md:heading_2">HOW I CAN</div>
-            <div class=" reveal-type heading_2_mobile md:heading_2">HELP YOU</div>
-         </div>
-         <div class="col-span-1"></div>
-        <div class="flex flex-col col-span-7 w-full justify-start items-start">
-
-            <div class=" skill1 infor_skill_container bg-[#21201C] mt-[5vh] sm:mt-[50vh] mb-[960px]">
-              <div class="skill_title_container">
-                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
-                <div class="skill_title_text">
-                    <div class ="title_1_mobile sm:title_1">UI design</div>
-                    <div style ="color:#B5B3AD;
-                     font-size: 48px" class ="title_1_mobile sm:title_1">(01)</div>
-                </div>          
-              </div>
-              <div class="body_3_mobile sm:body_3">Specialize in designing mobile and web interfaces that align seamlessly with any brand or visual style. Proficient in <span style="color:#FDFDFC; font-weight: 600;">Figma</span> , <span style="color:#FDFDFC; font-weight: 600;">Photoshop</span>, and <span style="color:#FDFDFC; font-weight: 600;">Illustrator</span>, I adapt my design approach to match diverse aesthetics and user needs.</div>
+      </div> <!-- hero section -->
+      <div id="skill" class="flex flex-col px-4 sm:px-8 pt-[10vh] w-full items-start sm:justify-between gap-4 sm:gap-0" >
+        <div class="flex flex-col gap-4 sm:gap-[64px] w-full">
+          <div class="flex flex-row justify-between w-full">
+            <img src="./assests/icon/blink.svg" alt="" class="w-[76px] h-[76px]" />
+            <img src="./assests/icon/blink.svg" alt="" class="w-[76px] h-[76px]" />
+          </div>
+          <div class="flex flex-col gap-4 sm:gap-[32px]">
+            <div class="reveal-type heading_2_mobile md:heading_2">
+              What I CAN DO
             </div>
-            <div class=" skill2 infor_skill_container bg-[#21201C] mb-[864px]">
-              <div class="skill_title_container">
-                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
-                <div class="skill_title_text">
-                    <div class ="title_1_mobile sm:title_1">UX design</div>
-                    <div style ="color:#B5B3AD; font-size: 48px" class ="title_1_mobile sm:title_1">(02)</div>
-                </div>          
-              </div>
-              <div class="body_3_mobile sm:body_3">I conduct user research, define problems, and deliver design solutions through clear information architecture, sitemaps, and user flows—applying both <span style="color:#FDFDFC; font-weight: 600;">user-centered design principles</span> and <span style="color:#FDFDFC; font-weight: 600;">design thinking frameworks</span>.</div>
+            <div style="color:#62605B" class="body_2_mobile sm:body_2">
+              From brief to front-end, I help ideas take shape through design, motion and development.
             </div>
-            <div class=" skill3 infor_skill_container bg-[#21201C] mb-[768px]">
-              <div class="skill_title_container">
-                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
-                <div class="skill_title_text">
-                    <div class ="title_1_mobile sm:title_1">Motion/Prototype</div>
-                    <div style ="color:#B5B3AD; font-size: 48px" class ="title_1_mobile sm:title_1">(03)</div>
-                </div>          
-              </div>
-              <div class="body_3_mobile sm:body_3">Skilled in creating interactive prototypes, custom icons, flash screen animations, and product showreels to enhance user experience and product presentation. Tool use: <span style="color:#FDFDFC; font-weight: 600;">Lottiefile</span>, <span style="color:#FDFDFC; font-weight: 600;">Protopie</span> and <span style="color:#FDFDFC; font-weight: 600;">After Effects</span>.</div>
-            </div>
-            <div class=" skill4 infor_skill_container bg-[#21201C] mb-[300px]">
-              <div class="skill_title_container">
-                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
-                <div class="skill_title_text">
-                    <div class ="title_1_mobile sm:title_1">Front-end development</div>
-                    <div style ="color:#B5B3AD; font-size: 48px" class ="title_1_mobile sm:title_1">(04)</div>
-                </div>          
-              </div>
-              <div class="body_3_mobile sm:body_3">Familiar with <span style="color:#FDFDFC; font-weight: 600;">HTML</span>, and <span style="color:#FDFDFC; font-weight: 600;">CSS</span> allows me to bridge the gap between design and development, ensuring smoother handoffs and more practical design solutions.</div>
-            </div>             
-
+            <img src="./assests/icon/arrow_downright_pixel.svg" alt="" class="w-[24px] h-[24px] sm:w-[42px] sm:h-[42px]"/>
+          </div>
         </div>
-       </div>
+        <div class="grid grid-cols-5 sm:grid-cols-12 sm:gap-8 w-full">
+          <div class="col-span-5"></div>
+          <div class="flex flex-col col-span-5 sm:col-span-7 w-full justify-start items-start">
+              <div class=" skill1 infor_skill_container bg-[#FDFDFC] mb-[50svh]">
+                <div class="skill_title_container">
+                  <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                  <div class="skill_title_text">
+                      <div class="flex flex-row gap-[24px] items-center">
+                        <img src="./assests/icon/UX_Design_logo.svg" alt="" class="w-5 h-5 sm:w-12 sm:h-12">
+                        <div class="title_1_mobile sm:title_1">UX design</div>
+                      </div>
+                      <div class ="title_1_number_mobile sm:title_1_number">(01)</div>
+                  </div>          
+                </div>
+                <div class="body_3_mobile sm:body_3 sm:pl-[72px]">Conduct user research, define problems, and deliver design solutions through clear information architecture, sitemaps, and user flows— applying both user-centered design principles and design thinking frameworks.</div>
+              </div>
+              <div class=" skill2 infor_skill_container bg-[#FDFDFC] mb-[45svh]">
+                <div class="skill_title_container">
+                  <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                  <div class="skill_title_text">
+                      <div class="flex flex-row gap-[24px] items-center">
+                        <img src="./assests/icon/UI_Design_logo.svg" alt="" class="w-5 h-5 sm:w-12 sm:h-12">
+                        <div class="title_1_mobile sm:title_1">UI design</div>
+                      </div>
+                      <div class ="title_1_number_mobile sm:title_1_number">(02)</div>
+                  </div>          
+                </div>
+                <div class="body_3_mobile sm:body_3 sm:pl-[72px]">Specialize in designing mobile and web interfaces that align seamlessly with any brand or visual style. Proficient in Figma , Photoshop, and Illustrator, I adapt my design approach to match diverse aesthetics and user needs.</div>
+              </div>
+              <div class=" skill3 infor_skill_container bg-[#FDFDFC] mb-[40svh]">
+                <div class="skill_title_container">
+                  <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                  <div class="skill_title_text">
+                      <div class="flex flex-row gap-[24px] items-center">
+                        <img src="./assests/icon/Motion_logo.svg" alt="" class="w-5 h-5 sm:w-12 sm:h-12">
+                        <div class="title_1_mobile sm:title_1">Motion/Prototype</div>
+                      </div>
+                      <div class ="title_1_number_mobile sm:title_1_number">(03)</div>
+                  </div>          
+                </div>
+                <div class="body_3_mobile sm:body_3 sm:pl-[72px]">Create interactive prototypes, custom icons, flash screen animations, and product showreels to enhance user experience and product presentation. Tool use: Lottiefile, Protopie and After Effects.</div>
+              </div>
+              <div class=" skill4 infor_skill_container bg-[#FDFDFC] mb-[50svh]">
+                <div class="skill_title_container">
+                  <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                  <div class="skill_title_text">
+                      <div class="flex flex-row gap-[24px] items-center">
+                        <img src="./assests/icon/frontend_logo.svg" alt="" class="w-5 h-5 sm:w-12 sm:h-12">
+                        <div class="title_1_mobile sm:title_1">Front-end Development</div>
+                      </div>
+                      <div class ="title_1_number_mobile sm:title_1_number">(04)</div>
+                  </div>          
+                </div>
+                <div class="body_3_mobile sm:body_3 sm:pl-[72px]">Familiar with HTML, and CSS allows me to bridge the gap between design and development, ensuring smoother handoffs and more practical design solutions.</div>
+              </div>             
+
+          </div>          
+        </div>
+
+      </div>
       </div> <!-- skill -->
       <section class="worksection">
-        <div id="work" class="flex flex-col px-2 sm:px-8 pb-[12vh] justify-start bg-[#21201C] w-full rounded-b-3xl z-10">
+        <div id="work" class="flex flex-col px-4 sm:px-8 pb-[12vh] justify-start bg-[#FDFDFC] w-full z-10 gap-4 sm:gap-16">
+          <div class="flex flex-row justify-between w-full">
+            <img src="./assests/icon/blink.svg" alt="" class="w-[76px] h-[76px]" />
+            <img src="./assests/icon/blink.svg" alt="" class="w-[76px] h-[76px]" />
+          </div>
           <div class="flex flex-row  gap-2 sm:gap-4 items-center">
-            <div class=" reveal-type heading_2_mobile md:heading_2">SELECTED WORK</div>
+            <div class=" reveal-type heading_2_mobile md:heading_2">Selected WORK</div>
           </div>
           <div class="flex flex-col sm:grid sm:grid-cols-12 w-full pt-6 gap-8 sm:pt-[5vh]">
             <div class="col-span-5">
-              <div class="sticky top-12 flex flex-col w-full gap-2">
-                <div style="text-align: left; " class="body_2_mobile sm:body_2">1/   <span style="color:#FDFDFC; font-weight: 500;">Finourse</span></div>
-                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
-                <div style="text-align: left; " class="body_2_mobile sm:body_2">2/ <span style="color:#FDFDFC; font-weight: 500;">Saigonzoo</span></div>
-                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
-                <div style="text-align: left; " class="body_2_mobile sm:body_2">3/ <span style="color:#FDFDFC; font-weight: 500;">Acmotive</span></div>
-                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
-                <div style="text-align: left; " class="body_2_mobile sm:body_2">4/ <span style="color:#FDFDFC; font-weight: 500;">Hulib</span></div>
-                <div class="w-full h-[0.5px] bg-[#62605B]"></div>                
-                <div class="flex flex-row items-center p-4">                  
-                  <img src="./assests/icon/ArrowElbowDownRight.svg">
-                  <a class="border-b hover-text-social button" href="Work.html">
-                    <span style="color:#FDFDFC" class="top">My Gallery</span>
-                    <span style="color:#FDFDFC" class="bottom">My Gallery</span>
-                  </a>
+              <div class="sticky top-20 flex flex-col w-full gap-2 sm:gap-5">
+                <div class="list_work">
+                  <div class="work_number_mobile sm:work_number">(01)</div>
+                  <div class="work_name_mobile sm:work_name">HULIB</div>
                 </div>
+                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                <div class="list_work">
+                  <div class="work_number_mobile sm:work_number">(02)</div>
+                  <div class="work_name_mobile sm:work_name">FINOURSE</div>
+                </div>
+                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                <div class="list_work">
+                  <div class="work_number_mobile sm:work_number">(03)</div>
+                  <div class="work_name_mobile sm:work_name">SAIGONZOO</div>
+                </div>
+                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                <div class="list_work">
+                  <div class="work_number_mobile sm:work_number">(04)</div>
+                  <div class="work_name_mobile sm:work_name">NHA KHOA 2000</div>
+                </div>
+                <div class="w-full h-[0.5px] bg-[#62605B]"></div>                
+                <a href="Work.html" class ="gallery_button">
+                    <span style="color:#21201C;z-index:1" class="button">MY GALLERY</span>
+                    <img style="position:absolute; left:0px; width:221px; height:64px" src="./assests/icon/button_bg.svg"/>
+                    <div class="icon-cv-wrapper">
+                      <img
+                        src="./assests/icon/arrow_upright_white_pixel.svg"
+                        alt="Download icon" class="arrow-icon" />
+                      <img
+                        src="./assests/icon/arrow_upright_white_pixel.svg"
+                        alt="Download icon" class="arrow-icon-clone" />
+                    </div>
+                </a>
               </div>              
             </div>
 
            <div class="relative grid sm:grid-cols-1 gap-16 col-span-7">
+            <a class="workcard" href="https://hulib.org" target="_blank">
+              <div style="width: full; aspect-ratio: 16/9;">
+                <img src="./assests/image/hulib_thumbnail.png" alt="" class="size-full object-cover"/>
+              </div>
+              <div class="workcardinfo">
+                <div class="flex justify-between self-stretch items-end">
+                  <div class="title_2_mobile sm:title_2">Hulib</div>
+                  <div class="tag">MENTAL HEALTH</div>
+                </div>
+                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
+                <div class="flex justify-between self-stretch">
+                  <div style="color:#62605B" class="body_1">WEB APP</div>
+                  <div style="color:#62605B"class="body_1">2024-2025</div>
+                </div>
+              </div>
+              <div class="detail_button bg-[#EBFF00] rounded-full flex justify-center items-center text-[#21201C] text-[12px] font-medium ">
+                DETAIL
+              </div>
+            </a>
             <a class="workcard" href="https://www.behance.net/gallery/219015799/FINOURSE-Educational-app" target="_blank">
               <div style="width: full; aspect-ratio: 16/9;">
                 <img src="./assests/image/Thumbnail.png" alt="" class="size-full object-cover"/>
               </div>
               <div class="workcardinfo">
                 <div class="flex justify-between self-stretch items-end">
-                  <div class="title_2_mobile sm:title_2">FINOURSE</div>
+                  <div class="title_2_mobile sm:title_2">Finourse</div>
                   <div class="tag">EDUCATION</div>
                 </div>
                 <div class="w-full h-[0.5px] bg-[#62605B]"></div>
                 <div class="flex justify-between self-stretch">
-                  <div style="color:#B5B3AD" class="body_1">MOBILE APP</div>
-                  <div style="color:#B5B3AD"class="body_1">2025</div>
+                  <div style="color:#62605B" class="body_1">MOBILE APP</div>
+                  <div style="color:#62605B" class="body_1">2025</div>
                 </div>
               </div>
-              <div class="detail_button bg-[#FDFDFC] rounded-full flex justify-center items-center text-[#21201C] text-[12px] font-medium ">
+              <div class="detail_button bg-[#EBFF00] rounded-full flex justify-center items-center text-[#21201C] text-[12px] font-medium ">
                 DETAIL
               </div>
             </a>
@@ -490,56 +595,36 @@
               </div>
               <div class="workcardinfo">
                 <div class="flex justify-between self-stretch items-end">
-                  <div style="color:#FDFDFC" class="title_2_mobile sm:title_2">SAIGONZOO</div>
-                  <div class="tag">TOURISM/NATURE</div>
-                </div>
-                <div class="w-full h-[0.5px] bg-[#62605B]"></div>
-                <div class="flex justify-between self-stretch">
-                  <div style="color:#B5B3AD" class="body_1">WEBSITE</div>
-                  <div style="color:#B5B3AD" class="body_1">2025</div>
-                </div>
-              </div>
-              <div class="detail_button bg-[#FDFDFC] rounded-full text-[#21201C] text-[12px] font-medium ">
-                <span>DETAIL</span>
-              </div>
-            </a>
-            <a class="workcard" href="https://www.behance.net/gallery/223777337/ACMOTIVE-Fitness-app" target="_blank">
-              <div style="width: full; aspect-ratio: 16/9;">
-                <img src="./assests/image/1.png" alt="" class="size-full object-cover"/>
-              </div>
-              <div class="workcardinfo">
-                <div class="flex justify-between self-stretch items-end">
-                  <div style="color:#FDFDFC" class="title_2_mobile sm:title_2">ACMOTIVE</div>
+                  <div class="title_2_mobile sm:title_2">Saigonzoo</div>
 
-                  <div class="tag">HEALTH/SPORT</div>
+                  <div class="tag">NATURE/TOURISM</div>
                 </div>
                 <div class="w-full h-[0.5px] bg-[#62605B]"></div>
                 <div class="flex justify-between self-stretch">
-                  <div style="color:#B5B3AD" class="body_1">MOBILE APP</div>
-                  <div style="color:#B5B3AD" class="body_1">2025</div>
+                  <div style="color:#62605B" class="body_1">WEBSITE</div>
+                  <div style="color:#62605B" class="body_1">2025</div>
                 </div>
               </div>
-              <div class="detail_button bg-[#FDFDFC] rounded-full flex justify-center items-center text-[#21201C] text-[12px] font-medium ">
+              <div class="detail_button bg-[#EBFF00] rounded-full flex justify-center items-center text-[#21201C] text-[12px] font-medium ">
                 DETAIL
               </div>
             </a>
-            <a class="workcard" href="https://hulib.org" target="_blank">
+            <a class="workcard" href="https://www.behance.net/gallery/229877805/Nha-Khoa-2000-Dentistry-App" target="_blank">
               <div style="width: full; aspect-ratio: 16/9;">
-                <img src="./assests/image/hulib_thumbnail.png" alt="" class="size-full object-cover"/>
+                <img src="./assests/image/Thumbnail_NhaKhoa2000.png" alt="" class="size-full object-cover"/>
               </div>
               <div class="workcardinfo">
                 <div class="flex justify-between self-stretch items-end">
-                  <div style="color:#FDFDFC" class="title_2_mobile sm:title_2">HULIB</div>
-
-                  <div class="tag">MENTAL HEALTH</div>
+                  <div class="title_2_mobile sm:title_2">Nha Khoa 2000</div>
+                  <div class="tag">MEDICAL TECH</div>
                 </div>
                 <div class="w-full h-[0.5px] bg-[#62605B]"></div>
                 <div class="flex justify-between self-stretch">
-                  <div style="color:#B5B3AD" class="body_1">WEB APP</div>
-                  <div style="color:#B5B3AD" class="body_1">2024-2025</div>
+                  <div style="color:#62605B" class="body_1">MOBILE APP</div>
+                  <div style="color:#62605B" class="body_1">2025</div>
                 </div>
               </div>
-              <div class="detail_button bg-[#FDFDFC] rounded-full flex justify-center items-center text-[#21201C] text-[12px] font-medium ">
+              <div class="detail_button bg-[#EBFF00] rounded-full flex justify-center items-center text-[#21201C] text-[12px] font-medium ">
                 DETAIL
               </div>
             </a>
@@ -551,67 +636,71 @@
 
       
 
-      <div id="contact" class="flex flex-col w-full bg-[#FDFDFC] p-2 sm:p-8  gap-2 sm:gap-[48px] items-center">
-        <div class="flex flex-col sm:flex-row w-full items-center sm:justify-between">
-          <div style = "width: 386px; aspect-ratio: 16/9;">
-            <img src="./assests/image/anhcanhan3.png" alt="" />
+      <div id="contact" class="flex flex-col w-full bg-[#FDFDFC] p-4 sm:p-8  gap-4 sm:gap-8 items-center z-40">
+        <div class="flex flex-row justify-between w-full">
+            <img src="./assests/icon/blink.svg" alt="" class="w-[76px] h-[76px]" />
+            <img src="./assests/icon/blink.svg" alt="" class="w-[76px] h-[76px]" />
+        </div>
+        <div class="grid grid-cols-5 sm:grid-cols-12 w-full gap-4 sm:gap-8">
+          <div class="col-span-5 overflow-hidden">
           </div>
-          <div class="flex flex-col gap-[52px] w-[984px] justify-center items-center px-4">
-            <div class="reveal-type heading_4_mobile sm:heading_4">Ready For Any Challenge</div>
-            <div style="text-align: center; font-family: 'Be Vietnam Pro' ; font-size: 20px; font-weight: 500; line-height: 100%; color: #63635E;" >Contact me via</div>
+          <div class="col-span-7">
+            <div class="flex flex-col gap-8 w-full">
+              <div class="flex flex-col">
+                <span class="heading_4_mobile sm:heading_4">Ready for any</span>
+                <span class="heading_5_mobile sm:heading_5">CHALLENGE</span>
+              </div>
+              <img src="./assests/icon/arrow_downright_pixel.svg" alt="" class="w-[24px] h-[24px] sm:w-[42px] sm:h-[42px]"/>
+            </div>
           </div>
-          <div class=" w-[4px] sm:w-[386px] aspect-ratio-[16/9]">
+        </div>
+        <div class="grid grid-cols-5 sm:grid-cols-12 w-full">
+          <div class="col-span-5 h-[36px] sm:h-[144px] border-y-[0.5px] border-[#62605B]">
+            <span class="title_2_mobile sm:title_2">Let’s connect</span>
+          </div>
+          <div class="col-span-5 sm:col-span-7 w-full border-[0.5px] border-[#62605B] p-4">
+              <div class="flex flex-col sm:flex-row gap-4 sm:justify-between">
+                <div class="flex flex-col gap-4">
+                    <div class="contact">datnguyen.vnt@gmail.com</div>
+                    <div class="contact">(+84)964 359 167</div>
+                </div>
+                <div class="flex flex-col gap-4">
+                  <a class="hover-text-social contact" href="https://www.facebook.com/dat.nguyentatdat" target="_blank">
+                      <span  class="top">Facebook</span>
+                      <span  class="bottom">Facebook</span>
+                  </a>
+                  <a class="hover-text-social contact" href="https://www.instagram.com/tatdatishere/" target="_blank">
+                    <span class="top">Instagram</span>
+                    <span class="bottom">Instagram</span>
+                  </a>
+                  <a class="hover-text-social contact" href="https://www.linkedin.com/in/dattatnguyen134/" target="_blank">
+                    <span class="top">Linkedin</span>
+                    <span class="bottom">Linkedin</span>
+                  </a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="contact">Ho Chi Minh City</div>
+                    <div class="contact">Viet Nam</div>
+                </div>
+              </div>
+          </div>
 
          </div>
+        <div class="flex flex-row justify-between w-full">
+            <img src="./assests/icon/blink.svg" alt="" class="w-[76px] h-[76px]" />
+            <img src="./assests/icon/blink.svg" alt="" class="w-[76px] h-[76px]" />
         </div>
-        <div class="flex flex-col justify-between items-center w-full">
-          <div class="flex flex-row w-full justify-between">
-              <img src="./assests/icon/Vector6.svg" alt="Arrow Line Down" />
-              <img src="./assests/icon/Vector8.svg" alt="Arrow Line Down" />
-          </div>
-          <div class="flex flex-col sm:flex-row w-full px-8 justify-between">
-            <div class="contactinfo">
-              <div class="contact">datnguyen.vnt@gmail.com</div>
-            </div>
-            <div class="contactinfo">
-              <div class="contact">(+84)964 359 167</div>
-            </div>
-              
-          </div>
-          <div class="flex flex-row w-full justify-between">
-              <img src="./assests/icon/Vector7.svg" alt="Arrow Line Down" />
-              <img src="./assests/icon/Vector9.svg" alt="Arrow Line Down" />
-          </div>
+        <div class="flex flex-row justify-between items-center w-full">
+          <span style="color:#62605B"class="body_1">Design and Develop by Nguyen Tat Dat (Diaz)</span>
+          <a class="flex w-11 h-11 p-[6px] justify-center items-center rounded-full bg-[#21201C]" href="#top">
+            <img
+              src="./assests/icon/ArrowUp.svg"
+              alt="Arrow Line Down"
+            />
+          </a>
+
         </div>
-        <div class="w-full h-[0.5px] bg-[#cccccc]"></div>
-        <div class="flex flex-col items-center gap-4">
-        <div style="text-align: center; font-family: 'Be Vietnam Pro' ; font-size: 20px; font-weight: 500; line-height: 100%; color: #63635E;">Present 24/24 on</div>
-          <div class="flex flex-col items-center gap-2">
-            <a class="hover-text-social contact" href="https://www.facebook.com/dat.nguyentatdat" target="_blank">
-                <span  class="top">Facebook</span>
-                <span  class="bottom">Facebook</span>
-            </a>
-            <a class="hover-text-social contact" href="https://www.instagram.com/tatdatishere/" target="_blank">
-              <span class="top">Instagram</span>
-              <span class="bottom">Instagram</span>
-            </a>
-            <a class="hover-text-social contact" href="https://www.linkedin.com/in/dattatnguyen134/" target="_blank">
-              <span class="top">Linkedin</span>
-              <span class="bottom">Linkedin</span>
-            </a>
-          </div>
-        </div>
-        <a class="flex w-11 h-11 p-[6px] justify-center items-center rounded-full bg-[#21201C]" href="#top">
-          <img
-            src="./assests/icon/ArrowUp.svg"
-            alt="Arrow Line Down"
-          />
-        </a>
       </div>
-      <div class="h-[500px]">
-        <spline-viewer url="https://prod.spline.design/NEiOCO1PPRWjJ3O0/scene.splinecode"></spline-viewer>
-      </div>
-      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.98/build/spline-viewer.js"></script>
     </div>
     <script src="https://unpkg.com/lenis@1.3.3/dist/lenis.min.js"></script>
     <script src="./assests/js/gsap.min.js"></script>
@@ -732,7 +821,7 @@
       const section = document.querySelector(".worksection");
 
       gsap.to(section, {
-      scale: 0.96,
+      scale: 1,
       ease: "power1.out",
       scrollTrigger: {
         trigger: section,
@@ -776,7 +865,7 @@
     gsap.to(skill2,{
       scrollTrigger:{
         trigger: skill2,
-        start: "top 276vh",
+        start: "top 290vh",
         endTrigger: "#work",
         end: "top bottom",
         pin:true,
@@ -789,7 +878,7 @@
     gsap.to(skill3,{
       scrollTrigger:{
         trigger: skill3,
-        start: "top 372vh",
+        start: "top 400vh",
         endTrigger: "#work",
         end: "top bottom",
         pin:true,
@@ -802,7 +891,7 @@
     gsap.to(skill4,{
       scrollTrigger:{
         trigger: skill4,
-        start: "top 468vh",
+        start: "top 510vh",
         endTrigger: "#work",
         end: "top bottom",
         pin:true,
