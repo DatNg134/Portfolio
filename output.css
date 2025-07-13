@@ -1696,7 +1696,7 @@ video {
 @font-face {
   font-family: 'BHN Victor Serif';
 
-  src: url('/assests/fonts/BHN Victor Serif Italic.otf') format('opentype');
+  src: url('/assests/fonts/BHN Victor Serif Italic.woff2') format('woff2');
 
   font-weight: 400;
 
@@ -1706,7 +1706,7 @@ video {
 @font-face {
   font-family: 'Monument Grotesk';
 
-  src: url('/assests/fonts/MonumentGrotesk-Regular.otf') format('opentype');
+  src: url('/assests/fonts/MonumentGrotesk-Regular.woff2') format('woff2');
 
   font-weight: 400;
 
