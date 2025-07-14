@@ -1524,34 +1524,33 @@ video {
 
 .heading_2_mobile{
   color: #21201C;
-  font-family: 'BHN Victor Serif', serif;
-  font-size: 32px;
+  font-family: 'Silkscreen', sans-serif;
+  font-size: 48px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
   /* 213px */
+  letter-spacing: -7px;
 }
 
 .title_1_number_mobile{
   color: #B5B3AD;
-  font-family: 'Monument Grotesk', sans-serif;
+  font-family: 'Boska-VariableItalic', serif;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 100%;
   /* 213px */
-  letter-spacing: -5%;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .work_number_mobile{
   color: #B5B3AD;
-  font-family: 'BHN Victor Serif', serif;
+  font-family: 'Boska-VariableItalic', serif;
   font-size: 12px;
-  font-style: normal;
+  font-style: italic;
   font-weight: 400;
   line-height: 100%;
   /* 213px */
-  letter-spacing: -5%;
 }
 
 .work_name_mobile{
@@ -1568,7 +1567,7 @@ video {
 .title_1{
   color: #21201C;
   text-align: right;
-  font-family: 'BHN Victor Serif', serif;
+  font-family: 'Monument Grotesk', sans-serif;
   font-size: 68px;
   font-style: normal;
   font-weight: 400;
@@ -1579,7 +1578,7 @@ video {
 .title_1_mobile{
   color: #21201C;
   text-align: right;
-  font-family: 'BHN Victor Serif', serif;
+  font-family: 'Monument Grotesk', sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -1589,8 +1588,8 @@ video {
 
 .title_2{
   color: #21201C;
-  font-family: 'BHN Victor Serif', serif;
-  font-size: 76px;
+  font-family: 'Monument Grotesk', sans-serif;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -1599,8 +1598,8 @@ video {
 
 .title_2_mobile{
   color: #21201C;
-  font-family: 'BHN Victor Serif', serif;
-  font-size: 32px;
+  font-family: 'Monument Grotesk', sans-serif;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -1611,16 +1610,18 @@ video {
   font-family: "Space Mono", monospace ;
   font-size: 40px;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 120%;
   color: #21201C;
 }
 
-.heading_5_mobile{
-  font-family: "Space Mono", monospace ;
-  font-size: 56px;
-  font-weight: 600;
-  line-height: 100%;
-  color: #EBFF00;
+.contact_title_mobile{
+  color: #21201C;
+  font-family: 'Boska-VariableItalic', serif;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 32px;
+  /* 64px */
 }
 
 .contact{
@@ -1719,6 +1720,32 @@ video {
   src: url('/assests/fonts/Sentient-ExtralightItalic.woff2') format('woff2');
 
   font-weight: 200;
+
+  font-display: swap;
+
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Boska-MediumItalic';
+
+  src: url('./assests/fonts/Boska-MediumItalic.woff2') format('woff2');
+
+  font-weight: 500;
+
+  font-display: swap;
+
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Boska-VariableItalic';
+
+  src: url('./assests/fonts/Boska-VariableItalic.woff2') format('woff2'),
+       url('./assests/fonts/Boska-VariableItalic.woff') format('woff'),
+       url('./assests/fonts/Boska-VariableItalic.ttf') format('truetype');
+
+  font-weight: 200 900;
 
   font-display: swap;
 
@@ -1922,8 +1949,8 @@ video {
     gap: 2rem;
   }
 
-  .sm\:gap-\[20svh\] {
-    gap: 20svh;
+  .sm\:gap-\[10svh\] {
+    gap: 10svh;
   }
 
   .sm\:gap-\[32px\] {
@@ -2019,24 +2046,22 @@ video {
 
   .sm\:title_1_number{
     color: #B5B3AD;
-    font-family: 'Monument Grotesk', sans-serif;
+    font-family: 'Boska-VariableItalic', serif;
     font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%;
+    line-height: 32px;
     /* 213px */
-    letter-spacing: -5%;
+    font-weight: 400;
+    font-style: italic;
   }
 
   .sm\:work_number{
     color: #B5B3AD;
-    font-family: 'BHN Victor Serif', serif;
+    font-family: 'Boska-VariableItalic', serif;
     font-size: 24px;
-    font-style: normal;
+    font-style: italic;
     font-weight: 400;
     line-height: 100%;
     /* 213px */
-    letter-spacing: -5%;
   }
 
   .sm\:work_name{
@@ -2053,7 +2078,7 @@ video {
   .sm\:title_1{
     color: #21201C;
     text-align: right;
-    font-family: 'BHN Victor Serif', serif;
+    font-family: 'Monument Grotesk', sans-serif;
     font-size: 68px;
     font-style: normal;
     font-weight: 400;
@@ -2063,8 +2088,8 @@ video {
 
   .sm\:title_2{
     color: #21201C;
-    font-family: 'BHN Victor Serif', serif;
-    font-size: 76px;
+    font-family: 'Monument Grotesk', sans-serif;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
@@ -2075,16 +2100,18 @@ video {
     font-family: "Space Mono", monospace ;
     font-size: 120px;
     font-weight: 400;
-    line-height: 100%;
+    line-height: 120%;
     color: #21201C;
   }
 
-  .sm\:heading_5{
-    font-family: "Space Mono", monospace ;
-    font-size: 180px;
-    font-weight: 600;
-    line-height: 100%;
-    color: #EBFF00;
+  .sm\:contact_title{
+    color: #21201C;
+    font-family: 'Boska-VariableItalic', serif;
+    font-size: 68px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 144px;
+    /* 64px */
   }
 
   .sm\:nickname{
@@ -2116,11 +2143,12 @@ video {
 
   .md\:heading_2{
     color: #21201C;
-    font-family: 'BHN Victor Serif', serif;
+    font-family: 'Silkscreen', sans-serif;
     font-size: 120px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
     /* 213px */
+    letter-spacing: -18px;
   }
 }
