@@ -1627,7 +1627,7 @@ video {
 .contact{
   color: #21201C;
   font-family: 'Monument Grotesk', sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -2107,7 +2107,7 @@ video {
   .sm\:contact_title{
     color: #21201C;
     font-family: 'Boska-VariableItalic', serif;
-    font-size: 68px;
+    font-size: 56px;
     font-style: italic;
     font-weight: 500;
     line-height: 144px;
